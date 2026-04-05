@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mark Anthony Andrada — AI Automation Specialist based in Bracknell, UK. Building intelligent workflows, AI agents, and automation systems." />
+  <meta property="og:title" content="Mark Anthony Andrada — AI Automation Specialist" />
+  <meta property="og:description" content="Building intelligent workflows and automating real-world systems with AI." />
+  <title>Mark Anthony Andrada — AI Automation Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">MA<span class="nav-logo-dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="YOUR_CALENDLY_LINK" target="_blank" class="nav-link nav-cta">Book a Call</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about" class="nav-mobile-link">About</a>
+      <a href="#skills" class="nav-mobile-link">Skills</a>
+      <a href="#projects" class="nav-mobile-link">Projects</a>
+      <a href="#contact" class="nav-mobile-link">Contact</a>
+      <a href="YOUR_CALENDLY_LINK" target="_blank" class="nav-mobile-link nav-mobile-cta">Book a Call</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+
+    <!-- AI Generated background image -->
+    <div class="hero-bg-wrap">
+      <img src="assets/img/hero-bg.png" alt="" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+
+    <!-- Animated canvas background -->
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <!-- Gradient overlays -->
+    <div class="hero-overlay-bottom"></div>
+    <div class="hero-overlay-top"></div>
+    <div class="hero-overlay-sides"></div>
+
+    <!-- Floating grid -->
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Available for Projects
+        </div>
+        <h1 class="hero-headline">
+          Intelligent<br>Automation,<br><em>Real Results.</em>
+        </h1>
+        <p class="hero-sub">
+          I build AI-powered workflows and automation systems that eliminate manual work and help businesses scale — using n8n, Claude, Make.com, and more.
+        </p>
+        <div class="hero-actions">
+          <a href="YOUR_CALENDLY_LINK" target="_blank" class="btn btn-primary">Book a Call</a>
+          <a href="#projects" class="btn btn-secondary">View My Work</a>
+        </div>
+        <div class="hero-typewriter-row">
+          <span class="tw-prefix">I build </span>
+          <span class="tw-text" id="typewriter"></span>
+          <span class="tw-cursor">|</span>
+        </div>
+      </div>
+
+      <!-- Right: workflow visual -->
+      <div class="hero-visual">
+        <div class="workflow-wrap">
+          <!-- Subtle bg rings -->
+          <div class="workflow-ring ring-1"></div>
+          <div class="workflow-ring ring-2"></div>
+
+          <!-- Central node -->
+          <div class="workflow-center">
+            <div class="wf-center-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="26" height="26">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="wf-center-label">AI Agent</div>
+            <div class="wf-center-sub">Tools Agent</div>
+          </div>
+
+          <!-- Tool nodes -->
+          <div class="tool-node node-n8n"    data-label="n8n">
+            <img src="assets/img/logos/n8n.svg"    alt="n8n"    onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span style="display:none">n8n</span>
+          </div>
+          <div class="tool-node node-make"   data-label="Make">
+            <img src="assets/img/logos/make.svg"   alt="Make"   onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span style="display:none">Make</span>
+          </div>
+          <div class="tool-node node-zapier" data-label="Zapier">
+            <img src="assets/img/logos/zapier.svg" alt="Zapier" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span style="display:none">Zapier</span>
+          </div>
+          <div class="tool-node node-claude" data-label="Claude">
+            <img src="assets/img/logos/claude.svg" alt="Claude" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span style="display:none">Claude</span>
+          </div>
+          <div class="tool-node node-ghl"    data-label="GHL">
+            <img src="assets/img/logos/ghl.svg"    alt="GHL"    onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span style="display:none">GHL</span>
+          </div>
+          <div class="tool-node node-openai" data-label="OpenAI">
+            <img src="assets/img/logos/openai.svg" alt="OpenAI" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span style="display:none">GPT</span>
+          </div>
+
+          <!-- SVG lines -->
+          <svg class="workflow-svg" id="workflowSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <span class="hero-scroll-line"></span>
+      <span class="hero-scroll-text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-eyebrow reveal">About Me</div>
+      <h2 class="section-title reveal">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <div class="about-profile">
+            <img src="assets/img/profile.jpg" alt="Mark Anthony Andrada" class="about-profile-img" />
+            <div class="about-profile-info">
+              <div class="about-profile-name">Mark Anthony Andrada</div>
+              <div class="about-profile-role">AI Automation Specialist</div>
+              <div class="about-profile-location">Bracknell, England, UK</div>
+            </div>
+          </div>
+          <p>I'm <strong>Mark Anthony Andrada</strong>, an AI Automation Specialist based in <strong>Bracknell, England</strong>. Since late 2025 I've been fully immersed in the world of AI automation — what started as curiosity quickly became a daily discipline.</p>
+          <p>I learn fast and ship faster. In just a few months I've built production-ready systems: AI-powered chatbots, voice agents, multi-step automation workflows, and full RAG pipelines — all connected to real APIs and real data.</p>
+          <p>Every day I push deeper — new tools, new models, new problems to solve. This isn't just a skill I'm picking up. It's the thing I do.</p>
+          <a href="YOUR_CALENDLY_LINK" target="_blank" class="btn btn-primary" style="margin-top:32px">Book a Free Call</a>
+        </div>
+        <div class="about-cards reveal">
+          <div class="about-card">
+            <div class="about-card-num">01</div>
+            <h3>Workflow Automation</h3>
+            <p>Building multi-step pipelines in n8n and Make.com that eliminate manual work and run around the clock.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-num">02</div>
+            <h3>AI Agents &amp; Chatbots</h3>
+            <p>Creating voice agents, RAG-powered chatbots, and LLM-integrated systems using GPT-4o and Claude.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-num">03</div>
+            <h3>MVP Development</h3>
+            <p>Turning ideas into working web applications and AI-powered tools — fast, clean, and production-ready.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-eyebrow reveal">Expertise</div>
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+
+      <div class="skills-group reveal">
+        <div class="skills-group-label">Automation Platforms</div>
+        <div class="skills-row">
+          <div class="skill-badge">n8n</div>
+          <div class="skill-badge">Make.com</div>
+          <div class="skill-badge">Zapier</div>
+          <div class="skill-badge">GoHighLevel</div>
+        </div>
+      </div>
+
+      <div class="skills-group reveal">
+        <div class="skills-group-label">AI &amp; LLM Tools</div>
+        <div class="skills-row">
+          <div class="skill-badge">OpenAI API</div>
+          <div class="skill-badge">Anthropic Claude</div>
+          <div class="skill-badge">Vapi AI</div>
+          <div class="skill-badge">Prompt Engineering</div>
+        </div>
+      </div>
+
+      <div class="skills-group reveal">
+        <div class="skills-group-label">Integration &amp; APIs</div>
+        <div class="skills-row">
+          <div class="skill-badge">REST APIs</div>
+          <div class="skill-badge">Webhooks</div>
+          <div class="skill-badge">Airtable</div>
+          <div class="skill-badge">Notion</div>
+          <div class="skill-badge">Supabase</div>
+          <div class="skill-badge">JSON</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-eyebrow reveal">Sample Work</div>
+      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-sub reveal">A growing collection of AI automation systems and intelligent workflows.</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-status">Live</span>
+            <span class="project-num">01</span>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/img/projects/lead-qualification.png" alt="AI Lead Qualification" class="project-img" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <h3 class="project-title">AI Lead Qualification &amp; Routing</h3>
+          <p class="project-desc">Automated lead intake from Google Forms, scored and classified by AI, then routed to Slack, Gmail, or Google Sheets based on lead temperature.</p>
+          <div class="project-tags">
+            <span class="tag">Zapier</span>
+            <span class="tag">AI by Zapier</span>
+            <span class="tag">Google Forms</span>
+            <span class="tag">Slack</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-status">Live</span>
+            <span class="project-num">02</span>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/img/projects/ai-router.png" alt="AI Message Router" class="project-img" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <h3 class="project-title">AI-Powered Message Router</h3>
+          <p class="project-desc">Incoming webhook data processed through Google Gemini AI, intelligently routed to Gmail, Slack, or Google Sheets based on content classification.</p>
+          <div class="project-tags">
+            <span class="tag">Make.com</span>
+            <span class="tag">Gemini AI</span>
+            <span class="tag">Webhooks</span>
+            <span class="tag">Gmail</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-status">Live</span>
+            <span class="project-num">03</span>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/img/projects/seo-pipeline.png" alt="SEO Content Pipeline" class="project-img" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <h3 class="project-title">SEO Content AI Pipeline</h3>
+          <p class="project-desc">Multi-phase n8n workflow automating SEO content creation — from keyword research and SERP analysis to AI-driven article writing powered by Claude.</p>
+          <div class="project-tags">
+            <span class="tag">n8n</span>
+            <span class="tag">Claude</span>
+            <span class="tag">DataForSEO</span>
+            <span class="tag">Reddit API</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-status">Live</span>
+            <span class="project-num">04</span>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/img/projects/call-handler.png" alt="Inbound Call Handler" class="project-img" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <h3 class="project-title">BrightSmile Inbound Call Handler</h3>
+          <p class="project-desc">Vapi AI handles patient calls in real time. On call end, booking data is extracted via webhook, saved to Supabase, and reception notified via Telegram.</p>
+          <div class="project-tags">
+            <span class="tag">n8n</span>
+            <span class="tag">Vapi AI</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Telegram</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-status">Live</span>
+            <span class="project-num">05</span>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/img/projects/voice-agent.png" alt="Dental Voice Agent" class="project-img" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <h3 class="project-title">BrightSmile Dental Voice Agent</h3>
+          <p class="project-desc">Telegram voice bot — transcribes patient voice messages, retrieves knowledge via RAG from Supabase, replies with natural speech powered by GPT-4o.</p>
+          <div class="project-tags">
+            <span class="tag">n8n</span>
+            <span class="tag">GPT-4o</span>
+            <span class="tag">Supabase RAG</span>
+            <span class="tag">Telegram</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-status">Live</span>
+            <span class="project-num">06</span>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/img/projects/chat-agent.png" alt="Dental Chat Agent" class="project-img" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <h3 class="project-title">BrightSmile Dental Chat Agent</h3>
+          <p class="project-desc">RAG-powered Telegram chatbot for dental patient support. Retrieves grounded answers from a Supabase knowledge base and replies instantly via GPT-4o Mini.</p>
+          <div class="project-tags">
+            <span class="tag">n8n</span>
+            <span class="tag">GPT-4o Mini</span>
+            <span class="tag">Supabase RAG</span>
+            <span class="tag">Embeddings</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-eyebrow reveal">Let's Talk</div>
+      <h2 class="section-title reveal">Get In Touch</h2>
+      <p class="section-sub reveal">Have a project in mind? I'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Bracknell, England, UK</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">
+              <a href="mailto:Markautomationva@gmail.com" class="contact-link">Markautomationva@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">
+              <a href="tel:+440757691181" class="contact-link">0757 691 181</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-label">Availability</div>
+            <div class="contact-item-value contact-available">Open to Projects</div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="YOUR_LINKEDIN_URL" target="_blank" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:Markautomationva@gmail.com" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email
+            </a>
+          </div>
+
+          <a href="YOUR_CALENDLY_LINK" target="_blank" class="btn btn-primary" style="margin-top:8px">
+            Book a Free Call
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-sending" style="display:none">Sending...</span>
+          </button>
+          <div class="form-success" id="formSuccess" style="display:none">
+            Message sent — I'll be in touch soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">MA<span class="nav-logo-dot">.</span></span>
+          <span class="footer-tagline">Building the future, one workflow at a time.</span>
+        </div>
+        <div class="footer-links">
+          <a href="YOUR_LINKEDIN_URL" target="_blank" class="footer-link">LinkedIn</a>
+          <a href="mailto:Markautomationva@gmail.com" class="footer-link">Email</a>
+          <a href="tel:+440757691181" class="footer-link">Phone</a>
+        </div>
+        <div class="footer-copy">© 2026 Mark Anthony Andrada</div>
+      </div>
+    </div>
+    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+  </footer>
+
+  <!-- ===== CHATBOT ===== -->
+  <button class="chatbot-btn" id="chatbotBtn" aria-label="Open chat assistant" title="AI Assistant — Coming Soon">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+  </button>
+  <div class="chatbot-tooltip" id="chatbotTooltip">
+    <strong>AI Assistant</strong><br>
+    <span>Coming soon — ask me anything about my services.</span>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
