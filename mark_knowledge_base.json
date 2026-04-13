@@ -1,0 +1,212 @@
+[
+  {
+    "id": "kb_001",
+    "category": "identity",
+    "title": "Who is Mark Anthony Andrada?",
+    "content": "Mark Anthony Andrada is an AI Automation Specialist based in Bracknell, England, UK. Since late 2025 he has been fully immersed in AI automation, rapidly building production-ready systems including AI-powered chatbots, voice agents, multi-step automation workflows, RAG pipelines, and full MVP applications. He works with clients worldwide, across any industry, with particular experience in healthcare/dental, real estate and sales, and e-commerce and marketing. He is currently open to new projects.",
+    "tags": ["about", "identity", "bio", "who", "mark", "background"]
+  },
+  {
+    "id": "kb_002",
+    "category": "contact",
+    "title": "How can I contact Mark or book a call?",
+    "content": "You can reach Mark Anthony Andrada through: Email — Markautomationva@gmail.com. Phone — 0757 691 181. Website — markautomates.tech. He is currently open to new projects worldwide. The best first step is to book a free 20-30 minute discovery call — no obligation, just a chance to explore what is possible for your business. Book at: https://calendly.com/markautomationva",
+    "tags": ["contact", "email", "phone", "book a call", "hire", "get in touch", "calendly", "discovery call"]
+  },
+  {
+    "id": "kb_003",
+    "category": "services",
+    "title": "What services does Mark offer?",
+    "content": "Mark offers three core service areas: (1) Workflow Automation — building multi-step automation pipelines that eliminate repetitive manual tasks and run 24/7, using n8n, Make.com, Zapier, and GoHighLevel. Best for businesses drowning in manual admin or using disconnected tools. (2) AI Agents and Chatbots — creating intelligent agents that can talk, reason, retrieve information, and take action, using Claude, GPT-4o, Vapi AI, and Supabase RAG. Best for businesses wanting 24/7 automated customer interaction, lead qualification, or support. (3) MVP Development — turning ideas into working, production-ready AI-powered applications fast, using Claude Code, REST APIs, Supabase, and Airtable. Best for founders and businesses who want a working product built quickly without a large dev team.",
+    "tags": ["services", "what he does", "offers", "hire", "workflow automation", "ai agents", "chatbots", "MVP", "development"]
+  },
+  {
+    "id": "kb_004",
+    "category": "services",
+    "title": "What is Workflow Automation and what can Mark build?",
+    "content": "Workflow Automation means building multi-step pipelines that eliminate repetitive manual tasks and run around the clock without human involvement. Mark builds these using n8n, Make.com (Integromat), Zapier, and GoHighLevel. Examples include: lead routing, CRM updates, email and Slack notifications, data sync between platforms, and scheduled reporting. This service is ideal for businesses drowning in manual admin or teams using disconnected tools that do not talk to each other.",
+    "tags": ["workflow automation", "n8n", "make.com", "zapier", "gohighlevel", "lead routing", "CRM", "pipeline", "automate"]
+  },
+  {
+    "id": "kb_005",
+    "category": "services",
+    "title": "What AI Agents and Chatbots can Mark build?",
+    "content": "Mark builds intelligent AI agents and chatbots that can talk, reason, retrieve information, and take action. Types he has built include: voice agents, RAG-powered chatbots, LLM-integrated workflows, and agentic pipelines with tool use. Tools used: Claude (Anthropic), OpenAI GPT-4o and GPT-4o Mini, Vapi AI, n8n, Supabase RAG, and embeddings. Real examples: a dental patient voice bot, an inbound call handler, and a customer support chatbot with knowledge base retrieval. Best for businesses wanting 24/7 automated customer interaction, lead qualification, or support.",
+    "tags": ["AI agents", "chatbots", "voice agent", "RAG", "GPT-4o", "claude", "vapi", "customer support", "lead qualification"]
+  },
+  {
+    "id": "kb_006",
+    "category": "services",
+    "title": "What is MVP Development and can Mark build web applications?",
+    "content": "MVP Development means turning ideas into working, production-ready AI-powered applications — fast. Mark uses Claude Code, agentic development workflows, REST APIs, Supabase, Airtable, Notion, and Webhooks. Examples include AI-powered web tools, internal dashboards, and custom automation platforms. This service is best for founders and businesses who want a working product built quickly without needing a large development team.",
+    "tags": ["MVP", "development", "web app", "application", "build", "product", "startup", "founder", "dashboard"]
+  },
+  {
+    "id": "kb_007",
+    "category": "skills",
+    "title": "What tools and technologies does Mark use?",
+    "content": "Mark is fluent across the full AI automation stack. Automation Platforms: n8n (advanced — multi-step, webhook, API, AI nodes), Make.com (Integromat), Zapier (including AI by Zapier), GoHighLevel for CRM automation. AI and LLM Tools: Anthropic Claude (API, Claude Code, agentic workflows), OpenAI API (GPT-4o, GPT-4o Mini), Vapi AI for voice agents, prompt engineering, agentic workflow design. Integration and APIs: REST APIs, Webhooks, Supabase (database and vector store for RAG), Airtable, Notion, Google Workspace (Forms, Sheets, Gmail), Slack, Telegram, DataForSEO, Reddit API, JSON. AI Knowledge Areas: RAG, vector embeddings and semantic search, LLM tool use and function calling, voice AI pipelines (STT to LLM to TTS), agent orchestration and chaining, prompt design and optimisation.",
+    "tags": ["skills", "tools", "tech stack", "n8n", "make.com", "zapier", "gohighlevel", "hubspot", "slack", "airtable", "notion", "supabase", "vapi", "openai", "claude", "RAG", "embeddings"]
+  },
+  {
+    "id": "kb_008",
+    "category": "integrations",
+    "title": "What platforms and tools can Mark integrate with?",
+    "content": "Mark can integrate with almost any platform that has an API or webhook — that covers virtually every modern business tool. He specialises in connecting existing tools into unified automated workflows. Platforms he works with include: Google Workspace (Forms, Sheets, Gmail), Slack, Telegram, Supabase, Airtable, Notion, GoHighLevel, HubSpot, CRMs, databases, websites, Zapier, Make.com, n8n, and more. His approach is API-first — if a tool exposes an endpoint, he can connect it. He adapts to whatever stack the client already uses rather than forcing a specific platform.",
+    "tags": ["integrations", "zapier", "hubspot", "gohighlevel", "slack", "notion", "airtable", "API", "webhook", "connect", "tools", "platforms", "google sheets", "telegram", "supabase", "flexible", "existing tools"]
+  },
+  {
+    "id": "kb_029",
+    "category": "projects",
+    "title": "What projects has Mark built? Show me his portfolio.",
+    "content": "Mark has built 7 live projects: (1) AI Lead Qualification and Routing — automates lead intake from Google Forms, scores leads with AI, and routes them to Slack, Gmail, or Google Sheets based on lead temperature. Built with Zapier and AI by Zapier. (2) AI-Powered Message Router — processes incoming webhook data through Gemini AI and routes messages to Gmail, Slack, or Google Sheets. Built with Make.com. (3) SEO Content AI Pipeline — multi-phase n8n workflow automating keyword research, SERP analysis, and AI-driven article writing. Built with n8n and Claude. (4) BrightSmile Inbound Call Handler — Vapi AI handles patient calls in real time, saves booking data to Supabase, and notifies reception via Telegram. Built with n8n and Vapi AI. (5) BrightSmile Dental Voice Agent — Telegram voice bot that transcribes patient messages, retrieves answers via RAG from Supabase, and replies with natural speech via GPT-4o. (6) BrightSmile Dental Chat Agent — RAG-powered Telegram chatbot for dental patient support using GPT-4o Mini and Supabase embeddings. (7) Inbound Voice AI Lead Qualifier — live on markautomates.tech, callers ring +1 (857) 269-2404 and speak with an AI that qualifies them as leads, then emails Mark a structured summary. Built with Vapi AI, n8n, Supabase RAG, GPT-4o Mini, and Gmail. All projects are live.",
+    "tags": ["projects", "portfolio", "show me", "what have you built", "examples", "work", "case studies", "list", "all projects"]
+  },
+  {
+    "id": "kb_009",
+    "category": "projects",
+    "title": "AI Lead Qualification and Routing project",
+    "content": "Mark built an AI Lead Qualification and Routing system. It automates lead intake from Google Forms, scores and classifies leads using AI, then routes them to Slack, Gmail, or Google Sheets based on lead temperature — hot, warm, or cold. Built with Zapier, AI by Zapier, Google Forms, and Slack. This project is live.",
+    "tags": ["project", "lead qualification", "zapier", "google forms", "slack", "CRM", "routing", "sales"]
+  },
+  {
+    "id": "kb_010",
+    "category": "projects",
+    "title": "AI-Powered Message Router project",
+    "content": "Mark built an AI-Powered Message Router. Incoming webhook data is processed through Google Gemini AI, which intelligently routes messages to Gmail, Slack, or Google Sheets based on content classification. Built with Make.com, Gemini AI, Webhooks, and Gmail. This project is live.",
+    "tags": ["project", "message router", "make.com", "gemini", "webhooks", "routing", "gmail", "slack"]
+  },
+  {
+    "id": "kb_011",
+    "category": "projects",
+    "title": "SEO Content AI Pipeline project",
+    "content": "Mark built a multi-phase n8n workflow automating SEO content creation from end to end — covering keyword research, SERP analysis, and AI-driven article writing powered by Claude. Built with n8n, Claude, DataForSEO, and the Reddit API. This project is live.",
+    "tags": ["project", "SEO", "content", "n8n", "claude", "DataForSEO", "blogging", "marketing", "keyword research"]
+  },
+  {
+    "id": "kb_012",
+    "category": "projects",
+    "title": "BrightSmile Inbound Call Handler project",
+    "content": "Mark built an inbound call handler for BrightSmile dental clinic. Vapi AI handles patient calls in real time. When a call ends, booking data is extracted via webhook, saved to Supabase, and reception is notified via Telegram. Built with n8n, Vapi AI, Supabase, and Telegram. This project is live.",
+    "tags": ["project", "voice", "vapi", "dental", "call handler", "supabase", "telegram", "healthcare", "inbound calls"]
+  },
+  {
+    "id": "kb_013",
+    "category": "projects",
+    "title": "BrightSmile Dental Voice Agent project",
+    "content": "Mark built a Telegram voice bot for BrightSmile dental patients. It transcribes patient voice messages, retrieves relevant knowledge via RAG from a Supabase knowledge base, and replies with natural speech powered by GPT-4o. Built with n8n, GPT-4o, Supabase RAG, and Telegram. This project is live.",
+    "tags": ["project", "voice agent", "RAG", "telegram", "GPT-4o", "dental", "supabase", "healthcare", "voice bot"]
+  },
+  {
+    "id": "kb_014",
+    "category": "projects",
+    "title": "BrightSmile Dental Chat Agent project",
+    "content": "Mark built a RAG-powered Telegram chatbot for BrightSmile dental patient support. It retrieves grounded answers from a Supabase knowledge base and replies instantly via GPT-4o Mini. Built with n8n, GPT-4o Mini, Supabase RAG, and embeddings. This project is live.",
+    "tags": ["project", "chatbot", "RAG", "telegram", "GPT-4o mini", "dental", "embeddings", "supabase", "healthcare"]
+  },
+  {
+    "id": "kb_015",
+    "category": "pricing",
+    "title": "How much do Mark's services cost? What is the pricing?",
+    "content": "Mark's pricing is always tailored to the project — there is no fixed price list because every automation system is different in scope, complexity, and integration requirements. The best way to get an accurate idea is to book a free discovery call where Mark can understand exactly what you need and give you a clear proposal. It is free, no obligation, and usually takes 20 to 30 minutes. Mark also offers ongoing support and maintenance as a paid retainer for clients who want continued development, monitoring, or improvements after their project is live. Book at: https://calendly.com/markautomationva",
+    "tags": ["pricing", "cost", "how much", "rates", "quote", "price", "fee", "charge", "retainer", "support"]
+  },
+  {
+    "id": "kb_016",
+    "category": "timeline",
+    "title": "How long does it take Mark to deliver a project?",
+    "content": "Turnaround depends entirely on the project scope. Simple automations such as a Zapier or Make workflow can be delivered in days. AI agents and chatbots typically take 1 to 2 weeks. Full MVPs or complex multi-system integrations are discussed during the discovery call. The exact timeline is always clarified during the discovery call once the full scope is understood. Book a free call at: https://calendly.com/markautomationva",
+    "tags": ["timeline", "how long", "delivery", "turnaround", "time", "deadline", "duration", "days", "weeks"]
+  },
+  {
+    "id": "kb_017",
+    "category": "process",
+    "title": "What is Mark's process for working with clients?",
+    "content": "Mark follows a clear 5-step process: (1) Discovery Call — a free call to understand your goals, challenges, and requirements. (2) Proposal — Mark puts together a tailored plan and quote based on your needs. (3) Build — he builds and tests the automation system or AI solution. (4) Deliver — the finished system is handed over with documentation or a walkthrough. (5) Support — Mark provides post-delivery support to make sure everything runs smoothly. This process keeps things clear, efficient, and focused on your outcome.",
+    "tags": ["process", "how it works", "steps", "workflow", "client", "work together", "onboarding", "proposal", "discovery"]
+  },
+  {
+    "id": "kb_018",
+    "category": "remote_work",
+    "title": "Does Mark work remotely? What timezone is he in?",
+    "content": "Yes, Mark works fully remotely and is available to clients worldwide — location is not a barrier. He is based in Bracknell, England, UK and operates in the GMT/BST timezone. He communicates via email and video call and can accommodate client meetings across different timezones. Remote collaboration is his standard way of working.",
+    "tags": ["remote", "timezone", "location", "UK", "GMT", "BST", "where", "online", "worldwide", "international"]
+  },
+  {
+    "id": "kb_019",
+    "category": "industries",
+    "title": "What industries does Mark work with?",
+    "content": "Mark works with clients worldwide across any industry. He has particular experience in: Healthcare and Dental — patient communication, booking automation, and voice agents. Real Estate and Sales — lead qualification, CRM automation, and routing. E-commerce and Marketing — SEO pipelines, content automation, and customer support bots. He is open to any industry — if there is repetitive work, data, or customer communication involved, automation can help.",
+    "tags": ["industries", "healthcare", "dental", "real estate", "sales", "e-commerce", "marketing", "niche", "who he works with"]
+  },
+  {
+    "id": "kb_020",
+    "category": "n8n_capability",
+    "title": "Can Mark build n8n projects or workflows?",
+    "content": "Yes, n8n is one of Mark's primary and most advanced tools. He has built multiple production n8n workflows including: an SEO Content AI Pipeline (multi-phase keyword research to article writing powered by Claude), a BrightSmile Inbound Call Handler (Vapi AI, Supabase, Telegram), a BrightSmile Dental Voice Agent (RAG with GPT-4o and Telegram), and a BrightSmile Dental Chat Agent (RAG chatbot with embeddings). He builds everything from simple automations to complex multi-node AI pipelines in n8n.",
+    "tags": ["n8n", "workflow", "automation", "build", "create", "can you", "projects", "n8n projects", "advanced"]
+  },
+  {
+    "id": "kb_021",
+    "category": "flexibility",
+    "title": "Can Mark handle any AI automation project? Is he flexible?",
+    "content": "Mark is highly adaptable and flexible across AI automation projects. He knows all major AI automation tools and is comfortable picking up new platforms quickly. His approach is straightforward — as long as a project is well-scoped with clear requirements, he can deliver it. He does not limit himself to one tool or one industry. He adapts to whatever tools and stack the client already uses. Give him a clear brief and he will find the best way to build it.",
+    "tags": ["flexible", "any project", "adaptable", "versatile", "can you build", "any tool", "custom", "requirements", "scope", "deliver", "bespoke"]
+  },
+  {
+    "id": "kb_022",
+    "category": "faq",
+    "title": "What exactly is AI automation?",
+    "content": "AI automation combines artificial intelligence (like ChatGPT or Claude) with automation platforms (like n8n or Make) to build systems that can think, decide, and act — without a human needing to be involved. For example: a chatbot that answers customer questions using your own knowledge base, or a workflow that scores incoming leads and routes them to the right place automatically.",
+    "tags": ["what is", "AI automation", "explain", "definition", "how it works", "beginner", "introduction"]
+  },
+  {
+    "id": "kb_023",
+    "category": "faq",
+    "title": "Do I need technical knowledge to work with Mark?",
+    "content": "Not at all. Mark handles all the technical build. You just need to know what problem you want solved — he will figure out the best way to automate it. No coding or technical background is required from the client.",
+    "tags": ["technical", "non-technical", "no coding", "easy", "beginner", "client", "knowledge required"]
+  },
+  {
+    "id": "kb_024",
+    "category": "faq",
+    "title": "What is the difference between n8n, Make, and Zapier?",
+    "content": "All three are automation platforms but they differ in power and flexibility. Zapier is the easiest to use, great for simple automations, and has a larger app library. Make.com (Integromat) is a more powerful visual builder, better for complex multi-step flows. n8n is the most flexible and powerful — self-hostable, ideal for advanced AI integrations and custom logic, and Mark's preferred tool for complex builds.",
+    "tags": ["n8n", "make.com", "zapier", "difference", "compare", "which one", "best", "automation platform"]
+  },
+  {
+    "id": "kb_025",
+    "category": "faq",
+    "title": "What is RAG and how does Mark use it?",
+    "content": "RAG stands for Retrieval-Augmented Generation. It is a technique where an AI agent retrieves relevant information from a knowledge base (like your company documents or FAQs) before generating a response — so the AI answers based on your data, not just general training. Mark uses RAG to build chatbots and voice agents that give accurate, grounded answers. He has built multiple live RAG systems using Supabase as the vector store.",
+    "tags": ["RAG", "retrieval augmented generation", "knowledge base", "embeddings", "vector", "supabase", "what is RAG", "grounded answers"]
+  },
+  {
+    "id": "kb_026",
+    "category": "faq",
+    "title": "Can Mark build a voice AI agent?",
+    "content": "Yes. Mark builds voice agents using Vapi AI integrated with LLMs like GPT-4o. These can handle inbound calls, answer questions, collect information, and trigger follow-up automations — all without a human on the line. He has built live voice agent systems for dental clinics including an inbound call handler and a Telegram-based voice bot.",
+    "tags": ["voice agent", "voice AI", "vapi", "inbound calls", "phone", "GPT-4o", "voice bot", "call handler", "telephone"]
+  },
+  {
+    "id": "kb_027",
+    "category": "faq",
+    "title": "Does Mark offer support after the project is delivered?",
+    "content": "Yes. Mark offers ongoing support and maintenance through a paid retainer, so your systems stay running and can be improved over time. This covers monitoring, updates, new integrations, and continued development after the initial project is delivered.",
+    "tags": ["support", "after delivery", "maintenance", "retainer", "ongoing", "post-project", "help", "updates"]
+  },
+  {
+    "id": "kb_028",
+    "category": "availability",
+    "title": "Is Mark available for freelance or new projects?",
+    "content": "Yes, Mark is currently available for new projects worldwide. He is open to freelance engagements, client work, and collaborations in AI automation, chatbot development, voice agent development, and workflow automation. The easiest way to get started is to book a free discovery call at https://calendly.com/markautomationva or reach him by email at Markautomationva@gmail.com.",
+    "tags": ["availability", "freelance", "hire", "open to work", "new projects", "available", "get started"]
+  },
+  {
+    "id": "kb_030",
+    "category": "projects",
+    "title": "Inbound Voice AI Lead Qualifier project",
+    "content": "Mark built an inbound voice AI lead qualifier that lives on his portfolio website. Visitors call a dedicated US phone number and speak with an AI assistant that qualifies them as potential clients — asking about their business type, what they want to automate, budget range, and timeline. The AI is grounded by a Supabase RAG knowledge base covering Mark's services and projects, so it can answer questions about what Mark does while qualifying the caller. After the call ends, a Vapi webhook triggers an n8n workflow that uses GPT-4o Mini to extract structured lead data from the transcript — name, email, business type, pain point, budget, timeline, and a Hot/Warm/Cold qualification score — then emails Mark a formatted lead summary. Built with Vapi AI, n8n, Supabase RAG, OpenAI GPT-4o Mini, and Gmail. This project is live at +1 (857) 269-2404.",
+    "tags": ["project", "voice agent", "vapi", "lead qualifier", "inbound call", "n8n", "RAG", "supabase", "email", "GPT-4o", "portfolio", "phone", "live demo"]
+  }
+]
