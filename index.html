@@ -430,14 +430,49 @@
   </footer>
 
   <!-- ===== CHATBOT ===== -->
-  <button class="chatbot-btn" id="chatbotBtn" aria-label="Open chat assistant" title="AI Assistant — Coming Soon">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+  <button class="chatbot-fab" id="chatbotFab" aria-label="Open chat assistant">
+    <svg class="fab-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
       <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
     </svg>
+    <svg class="fab-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="display:none">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
   </button>
-  <div class="chatbot-tooltip" id="chatbotTooltip">
-    <strong>AI Assistant</strong><br>
-    <span>Coming soon — ask me anything about my services.</span>
+
+  <div class="chatbot-panel" id="chatbotPanel" aria-hidden="true">
+    <div class="chatbot-header">
+      <div class="chatbot-header-info">
+        <div class="chatbot-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="chatbot-header-name">Mark's AI Assistant</div>
+          <div class="chatbot-header-status"><span class="chatbot-status-dot"></span>Online</div>
+        </div>
+      </div>
+      <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chat-msg chat-msg--bot">
+        <div class="chat-bubble">Hey! I'm Mark's AI assistant. Ask me anything about his services, projects, or how to work with him. 👋</div>
+      </div>
+    </div>
+
+    <div class="chatbot-input-row">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Ask me anything..." autocomplete="off" maxlength="500" />
+      <button class="chatbot-send" id="chatbotSend" aria-label="Send message">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
   </div>
 
   <script src="assets/js/main.js"></script>

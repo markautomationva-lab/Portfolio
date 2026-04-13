@@ -304,17 +304,100 @@
   }, { passive: true });
 })();
 
-/* ── Chatbot Tooltip ─────────────────────────────────────── */
+/* ── Chatbot Widget ──────────────────────────────────────── */
 (function initChatbot() {
-  const btn     = document.getElementById('chatbotBtn');
-  const tooltip = document.getElementById('chatbotTooltip');
-  if (!btn || !tooltip) return;
+  var fab      = document.getElementById('chatbotFab');
+  var panel    = document.getElementById('chatbotPanel');
+  var closeBtn = document.getElementById('chatbotClose');
+  var input    = document.getElementById('chatbotInput');
+  var sendBtn  = document.getElementById('chatbotSend');
+  var messages = document.getElementById('chatbotMessages');
+  if (!fab || !panel) return;
 
-  btn.addEventListener('mouseenter', () => tooltip.classList.add('visible'));
-  btn.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
-  btn.addEventListener('click', () => {
-    tooltip.classList.add('visible');
-    setTimeout(() => tooltip.classList.remove('visible'), 3200);
+  var WEBHOOK = 'https://n8n.srv1410418.hstgr.cloud/webhook/portfolio-chat';
+  var sessionId = 'sess_' + Math.random().toString(36).slice(2, 10);
+  var isOpen = false;
+  var isLoading = false;
+
+  var iconChat  = fab.querySelector('.fab-icon-chat');
+  var iconClose = fab.querySelector('.fab-icon-close');
+
+  function togglePanel() {
+    isOpen = !isOpen;
+    panel.classList.toggle('open', isOpen);
+    panel.setAttribute('aria-hidden', !isOpen);
+    iconChat.style.display  = isOpen ? 'none'  : '';
+    iconClose.style.display = isOpen ? ''      : 'none';
+    if (isOpen) { input.focus(); scrollToBottom(); }
+  }
+
+  function scrollToBottom() {
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function addMessage(text, role) {
+    var div = document.createElement('div');
+    div.className = 'chat-msg chat-msg--' + role;
+    var bubble = document.createElement('div');
+    bubble.className = 'chat-bubble';
+    bubble.textContent = text;
+    div.appendChild(bubble);
+    messages.appendChild(div);
+    scrollToBottom();
+    return div;
+  }
+
+  function showTyping() {
+    var div = document.createElement('div');
+    div.className = 'chat-msg chat-msg--bot chat-typing';
+    div.innerHTML = '<div class="chat-bubble"><span></span><span></span><span></span></div>';
+    messages.appendChild(div);
+    scrollToBottom();
+    return div;
+  }
+
+  function setLoading(state) {
+    isLoading = state;
+    sendBtn.disabled = state;
+    input.disabled = state;
+  }
+
+  async function sendMessage() {
+    var text = input.value.trim();
+    if (!text || isLoading) return;
+
+    input.value = '';
+    addMessage(text, 'user');
+    var typing = showTyping();
+    setLoading(true);
+
+    try {
+      var res = await fetch(WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text, sessionId: sessionId })
+      });
+      var data = await res.json();
+      typing.remove();
+      addMessage(data.reply || 'Sorry, I had trouble responding. Please try again.', 'bot');
+    } catch (e) {
+      typing.remove();
+      addMessage('Connection error — please try again in a moment.', 'bot');
+    }
+
+    setLoading(false);
+    input.focus();
+  }
+
+  fab.addEventListener('click', togglePanel);
+  closeBtn.addEventListener('click', togglePanel);
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && isOpen) togglePanel();
   });
 })();
 
