@@ -414,30 +414,38 @@
           </a>
         </div>
 
-        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-            <span class="btn-text">Send Message</span>
-            <span class="btn-sending" style="display:none">Sending...</span>
-          </button>
-          <div class="form-success" id="formSuccess" style="display:none">
-            Message sent — I'll be in touch soon.
-          </div>
-        </form>
+        <div class="contact-form reveal ghl-form-wrap">
+          <iframe
+            src="https://app.gohighlevel.com/v2/preview/z0okIH7VRbI0Ov7EU0gg"
+            class="ghl-iframe"
+            frameborder="0"
+            scrolling="yes"
+            title="Contact Form — Mark Automates"
+          ></iframe>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ===== GHL POPUP MODAL ===== -->
+  <div class="ghl-modal-overlay" id="ghlModal" role="dialog" aria-modal="true" aria-label="Free Automation Audit">
+    <div class="ghl-modal-box">
+      <button class="ghl-modal-close" id="ghlModalClose" aria-label="Close">✕</button>
+      <iframe
+        src="https://app.gohighlevel.com/v2/preview/z0okIH7VRbI0Ov7EU0gg"
+        class="ghl-modal-iframe"
+        frameborder="0"
+        scrolling="yes"
+        title="Free Automation Audit Form"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Floating trigger button -->
+  <button class="ghl-float-btn" id="ghlFloatBtn" aria-label="Get a Free Automation Audit">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    Free Audit
+  </button>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -505,5 +513,28 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // GHL Modal Pop-up
+    const ghlModal = document.getElementById('ghlModal');
+    const ghlFloatBtn = document.getElementById('ghlFloatBtn');
+    const ghlModalClose = document.getElementById('ghlModalClose');
+
+    ghlFloatBtn.addEventListener('click', () => {
+      ghlModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    ghlModalClose.addEventListener('click', () => {
+      ghlModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    ghlModal.addEventListener('click', (e) => {
+      if (e.target === ghlModal) {
+        ghlModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
 </body>
 </html>

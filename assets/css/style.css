@@ -1440,3 +1440,107 @@ strong { color: var(--text); font-weight: 600; }
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 }
+
+/* ── GHL Embedded Form (contact section) ───────────────────── */
+.ghl-form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.ghl-iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+  display: block;
+}
+
+/* ── GHL Floating Button ────────────────────────────────────── */
+.ghl-float-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.02em;
+}
+.ghl-float-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+}
+
+/* ── GHL Modal Overlay ──────────────────────────────────────── */
+.ghl-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+  padding: 16px;
+}
+.ghl-modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.ghl-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+.ghl-modal-overlay.active .ghl-modal-box {
+  transform: translateY(0);
+}
+.ghl-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  background: var(--bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.ghl-modal-close:hover { background: var(--border); }
+.ghl-modal-iframe {
+  width: 100%;
+  height: 80vh;
+  max-height: 700px;
+  border: none;
+  display: block;
+}
