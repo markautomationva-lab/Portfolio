@@ -1446,16 +1446,18 @@ strong { color: var(--text); font-weight: 600; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  overflow: hidden;
-  min-height: 600px;
+  overflow: visible;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
 }
 .ghl-iframe {
   width: 100%;
-  height: 650px;
+  min-height: 750px;
+  height: auto;
   border: none;
   display: block;
+  flex: 1;
 }
 
 /* ── GHL Floating Button ────────────────────────────────────── */
