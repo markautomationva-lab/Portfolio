@@ -132,11 +132,11 @@
         const dy = pts[i].y - pts[j].y;
         const d = Math.sqrt(dx*dx + dy*dy);
         if (d < DIST) {
-          const a = (1 - d / DIST) * 0.12;
+          const a = (1 - d / DIST) * 0.1;
           ctx.beginPath();
           ctx.moveTo(pts[i].x, pts[i].y);
           ctx.lineTo(pts[j].x, pts[j].y);
-          ctx.strokeStyle = `rgba(255,255,255,${a})`;
+          ctx.strokeStyle = `rgba(201,168,76,${a})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -147,7 +147,7 @@
     pts.forEach(p => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${p.bright})`;
+      ctx.fillStyle = `rgba(201,168,76,${p.bright})`;
       ctx.fill();
     });
 
@@ -224,7 +224,7 @@
       const lineBase = ns('line');
       lineBase.setAttribute('x1', nx); lineBase.setAttribute('y1', ny);
       lineBase.setAttribute('x2', cx); lineBase.setAttribute('y2', cy);
-      lineBase.setAttribute('stroke', 'rgba(255,255,255,0.07)');
+      lineBase.setAttribute('stroke', 'rgba(201,168,76,0.08)');
       lineBase.setAttribute('stroke-width', '1');
       svg.appendChild(lineBase);
 
@@ -232,7 +232,7 @@
       const line = ns('line');
       line.setAttribute('x1', nx); line.setAttribute('y1', ny);
       line.setAttribute('x2', cx); line.setAttribute('y2', cy);
-      line.setAttribute('stroke', 'rgba(255,255,255,0.55)');
+      line.setAttribute('stroke', 'rgba(201,168,76,0.5)');
       line.setAttribute('stroke-width', '1');
       line.setAttribute('stroke-dasharray', '3 10');
       line.setAttribute('filter', 'url(#lineGlow)');
@@ -250,14 +250,14 @@
       const dot = ns('circle');
       dot.setAttribute('cx', nx); dot.setAttribute('cy', ny);
       dot.setAttribute('r', '3');
-      dot.setAttribute('fill', 'rgba(255,255,255,0.7)');
+      dot.setAttribute('fill', 'rgba(201,168,76,0.7)');
       dot.setAttribute('filter', 'url(#dotGlow)');
       svg.appendChild(dot);
 
       // Pulse dot travelling toward center
       const pulse = ns('circle');
       pulse.setAttribute('r', '3');
-      pulse.setAttribute('fill', 'rgba(255,255,255,0.9)');
+      pulse.setAttribute('fill', 'rgba(201,168,76,0.9)');
       pulse.setAttribute('filter', 'url(#dotGlow)');
 
       const animX = ns('animate');
@@ -437,5 +437,23 @@
       txtNorm.style.display = 'inline';
       txtSend.style.display = 'none';
     }
+  });
+})();
+
+(function initProjectVideo() {
+  const wrap = document.getElementById('graceVideoWrap');
+  if (!wrap) return;
+  const video = document.getElementById('graceVideo');
+  const playBtn = document.getElementById('graceVideoPlay');
+
+  playBtn.addEventListener('click', () => {
+    video.play();
+  });
+  video.addEventListener('play', () => playBtn.classList.add('is-hidden'));
+  video.addEventListener('pause', () => playBtn.classList.remove('is-hidden'));
+  video.addEventListener('ended', () => playBtn.classList.remove('is-hidden'));
+  video.addEventListener('click', () => {
+    if (video.paused) video.play();
+    else video.pause();
   });
 })();
