@@ -1496,7 +1496,7 @@ strong { color: var(--gold-200); font-weight: 600; }
    ============================================================ */
 @media (max-width: 1080px) {
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-img { aspect-ratio: 16/9; }
+  .about-img-wrap { max-width: 360px; margin: 0 auto 24px; }
   .skills-table { grid-template-columns: repeat(2, 1fr); }
   .skills-col:nth-child(2) { border-right: none; }
   .skills-col:nth-child(3) { border-top: 1px solid rgba(201,168,76,0.08); }
