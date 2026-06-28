@@ -921,6 +921,7 @@ strong { color: var(--gold-200); font-weight: 600; }
   object-position: top;
   transition: transform 0.5s ease;
   display: block;
+  cursor: zoom-in;
 }
 .project-card:hover .project-img { transform: scale(1.04); }
 
@@ -1549,4 +1550,52 @@ strong { color: var(--gold-200); font-weight: 600; }
   .chatbot-fab { bottom: 20px; right: 20px; width: 48px; height: 48px; }
   .chatbot-panel { bottom: 82px; right: 20px; width: calc(100vw - 40px); }
   .about-stat-strip { padding: 16px; }
+}
+
+/* ============================================================
+   IMAGE LIGHTBOX
+   ============================================================ */
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(9,12,18,0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  cursor: zoom-out;
+}
+.img-lightbox.is-open { display: flex; }
+
+.img-lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(201,168,76,0.2);
+  box-shadow: var(--shadow-lg), var(--gold-glow);
+  cursor: default;
+}
+
+.img-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.25);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.img-lightbox-close:hover {
+  border-color: rgba(201,168,76,0.5);
+  color: var(--gold-300);
 }

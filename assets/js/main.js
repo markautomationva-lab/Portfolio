@@ -457,3 +457,32 @@
     else video.pause();
   });
 })();
+
+(function initImageLightbox() {
+  const lightbox = document.getElementById('imgLightbox');
+  if (!lightbox) return;
+  const lightboxImg = document.getElementById('imgLightboxImg');
+  const closeBtn = document.getElementById('imgLightboxClose');
+
+  const open = (src, alt) => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add('is-open');
+  };
+  const close = () => {
+    lightbox.classList.remove('is-open');
+    lightboxImg.src = '';
+  };
+
+  document.querySelectorAll('.project-img').forEach(img => {
+    img.addEventListener('click', () => open(img.src, img.alt));
+  });
+
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
+})();
