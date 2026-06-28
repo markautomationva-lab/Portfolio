@@ -857,7 +857,7 @@ strong { color: var(--gold-200); font-weight: 600; }
    ============================================================ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -1072,6 +1072,7 @@ strong { color: var(--gold-200); font-weight: 600; }
 
 .project-video {
   width: 100%;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -1521,7 +1522,7 @@ strong { color: var(--gold-200); font-weight: 600; }
 
   .services-grid,
   .services-grid--3 { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: 1fr; gap: 44px; }
 }
 
@@ -1537,7 +1538,7 @@ strong { color: var(--gold-200); font-weight: 600; }
   .tool-node { width: 50px; height: 50px; }
   .tool-node img { width: 24px; height: 24px; }
 
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: minmax(0, 1fr); }
   .skills-table { grid-template-columns: 1fr; }
   .skills-col { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.08); }
   .skills-col:last-child { border-bottom: none; }
