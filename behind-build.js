@@ -1,9 +1,9 @@
 // @ts-check
-import { projectEngineering } from './project-engineering.js?v=1bcd23e21865';
-import { mountArchitectureExplorer } from './architecture-explorer.js?v=1bcd23e21865';
-/** @typedef {import('./project-engineering.js?v=1bcd23e21865').TechnicalEvidence} TechnicalEvidence */
+import { projectEngineering } from './project-engineering.js?v=e18c9f47c6d4';
+import { mountArchitectureExplorer } from './architecture-explorer.js?v=e18c9f47c6d4';
+/** @typedef {import('./project-engineering.js?v=e18c9f47c6d4').TechnicalEvidence} TechnicalEvidence */
 /** Preserve all approved project images alongside the curated technical evidence.
- * @param {import('./project-engineering.js?v=1bcd23e21865').BehindTheBuild} source @param {TechnicalEvidence[]} assets */
+ * @param {import('./project-engineering.js?v=e18c9f47c6d4').BehindTheBuild} source @param {TechnicalEvidence[]} assets */
 export function includeProjectAssets(source,assets){
  const workflow=[...source.workflow],execution=[...source.execution];const seen=new Set([...workflow,...execution].flatMap(item=>[item.imageSrc,...(item.replaces||[])]));
  for(const item of assets){if(!item.imageSrc||seen.has(item.imageSrc))continue;seen.add(item.imageSrc);const technical=!/execution/i.test(item.title)&&/workflow|instructions|knowledge.ingestion|knowledge base|routing/i.test(item.title);(technical?workflow:execution).push(item);}

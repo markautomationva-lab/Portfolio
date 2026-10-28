@@ -1,5 +1,5 @@
 // @ts-check
-import { architectureMetadata } from './architecture-metadata.js?v=1bcd23e21865';
+import { architectureMetadata } from './architecture-metadata.js?v=e18c9f47c6d4';
 /** @typedef {{id:string,label:string,description:string,position?:{x:number,y:number}}} Component */
 /** @typedef {{description:string,nodes:Component[],edges:string[][]}} Diagram */
 /** @typedef {{layers:string[][],ranks:Map<string,number>,feedback:Set<string>,order:string[]}} Layout */

@@ -1,6 +1,6 @@
-import * as THREE from './vendor/three.module.js?v=1bcd23e21865';
-import { createProjectFocus } from './project-focus.js?v=1bcd23e21865';
-import { createGalleryVideo } from './gallery-video.js?v=1bcd23e21865';
+import * as THREE from './vendor/three.module.js?v=e18c9f47c6d4';
+import { createProjectFocus } from './project-focus.js?v=e18c9f47c6d4';
+import { createGalleryVideo } from './gallery-video.js?v=e18c9f47c6d4';
 // The official distribution is UMD and must run as a classic script, not in
 // strict ES-module scope. Load it once, locally, before creating gallery motion.
 function loadMotionScript(file) {
@@ -9,8 +9,8 @@ function loadMotionScript(file) {
     script.onload=resolve;script.onerror=()=>reject(new Error('Could not load '+file));document.head.append(script);
   });
 }
-if(!window.gsap)await loadMotionScript('./vendor/gsap.min.js?v=1bcd23e21865');
-if(!window.CustomEase)await loadMotionScript('./vendor/CustomEase.min.js?v=1bcd23e21865');
+if(!window.gsap)await loadMotionScript('./vendor/gsap.min.js?v=e18c9f47c6d4');
+if(!window.CustomEase)await loadMotionScript('./vendor/CustomEase.min.js?v=e18c9f47c6d4');
 const gsap=window.gsap;
 gsap.registerPlugin(window.CustomEase);
 window.CustomEase.create('gallery.camera','.77,0,.175,1');

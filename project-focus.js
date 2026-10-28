@@ -1,5 +1,5 @@
 // @ts-check
-import { mountBehindBuild } from './behind-build.js?v=1bcd23e21865';
+import { mountBehindBuild } from './behind-build.js?v=e18c9f47c6d4';
 /** @typedef {{card:HTMLElement,name:string}} FocusProject */
 /** @param {{root:HTMLElement,gallery:HTMLElement,index:HTMLElement,getProjects:()=>FocusProject[],selectProject:(project:FocusProject)=>void,onState:(open:boolean)=>void,isReduced:()=>boolean,onProjectChange?:(project:FocusProject|null)=>void}} options */
 export function createProjectFocus(options){

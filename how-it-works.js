@@ -1,5 +1,5 @@
 // @ts-check
-import {createWorkflowExplorer} from './workflow-explorer.js?v=1bcd23e21865';
+import {createWorkflowExplorer} from './workflow-explorer.js?v=e18c9f47c6d4';
 const processRoot=document.querySelector('.process-page');
 if(processRoot instanceof HTMLElement){
  const page=processRoot;

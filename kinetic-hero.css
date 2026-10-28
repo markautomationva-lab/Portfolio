@@ -1,0 +1,59 @@
+/* Scoped to the approved full-canvas home hero; other portfolio sections retain site.css. */
+#home.scroll-section{margin-top:0;background:transparent}
+body[data-page="home"] #services.scroll-section{background:transparent}
+#home .hero[data-kinetic-hero]{--kinetic-header-space:101px;--kinetic-width:100vw;position:relative;isolation:isolate;display:block;align-content:start;width:var(--kinetic-width);max-width:none;margin-left:calc(50% - var(--kinetic-width)/2);min-height:calc(100svh - var(--kinetic-header-space));padding:0;overflow:visible}
+[data-kinetic-hero] .kinetic-surface,[data-kinetic-hero] .kinetic-reading-light{--kinetic-fade:clamp(280px,34vh,390px);position:absolute;inset:calc(-1 * var(--kinetic-header-space)) 0 calc(-1 * var(--kinetic-fade));pointer-events:none;mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - var(--kinetic-fade) - 140px),transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - var(--kinetic-fade) - 140px),transparent 100%)}
+[data-kinetic-hero] .kinetic-surface{z-index:-3;background:#eee5d8 url('assets/site/kinetic-hero-fallback.jpg') center / cover;overflow:hidden}
+[data-kinetic-hero] .kinetic-surface canvas{display:block;width:100%;height:100%;pointer-events:none}
+[data-kinetic-hero] .kinetic-reading-light{z-index:-1;background:radial-gradient(ellipse 60% 85% at 15% 55%,#fffaf2ed 0%,#fffaf2c7 28%,#fffaf270 53%,#fffaf200 83%)}
+#home [data-kinetic-hero] .hero-copy{position:relative;max-width:1280px;margin:auto;padding:clamp(90px,16vh,180px) 5% 120px;pointer-events:none}
+#home [data-kinetic-hero] .hero-copy>*{pointer-events:auto;width:fit-content}
+#home [data-kinetic-hero] h1{font-size:clamp(62px,7.2vw,96px);line-height:1.01;letter-spacing:-2px;max-width:840px}
+#home [data-kinetic-hero] .lead{font-size:18px;line-height:1.75;max-width:520px}
+[data-kinetic-hero] .kinetic-motion{position:absolute;right:5%;bottom:27px;font:11px var(--body);min-height:44px;padding:8px 15px;border:1px solid #45434235;border-radius:22px;background:#fffaf2e8;color:#36383b;cursor:pointer}
+[data-kinetic-hero] .kinetic-motion:focus-visible{outline:3px solid #115578;outline-offset:5px}
+@media(min-width:1700px){#home [data-kinetic-hero] .hero-copy{padding-top:19vh}}
+@media(max-width:1000px){#home .hero[data-kinetic-hero]{min-height:calc(900px - var(--kinetic-header-space))}#home [data-kinetic-hero] .hero-copy{padding-top:140px}[data-kinetic-hero] .kinetic-reading-light{background:radial-gradient(ellipse 90% 80% at 8% 52%,#fffaf2f2,#fffaf2bd 43%,#fffaf200 90%)}}
+@media(max-width:740px){#home .hero[data-kinetic-hero]{min-height:calc(max(960px,100svh) - var(--kinetic-header-space))}#home [data-kinetic-hero] .hero-copy{padding:85px 6% 160px}#home [data-kinetic-hero] h1{font-size:clamp(49px,10.5vw,76px);letter-spacing:-1.4px}#home [data-kinetic-hero] .lead{font-size:16px;max-width:390px}#home [data-kinetic-hero] .eyebrow{font-size:9px;letter-spacing:1.2px}[data-kinetic-hero] .kinetic-reading-light{background:radial-gradient(ellipse 120% 76% at 30% 35%,#fffaf2f7 0%,#fffaf2e8 35%,#fffaf298 64%,#fffaf200 100%)}[data-kinetic-hero] .kinetic-motion{bottom:22px}}
+@media(max-width:380px){#home [data-kinetic-hero] h1{font-size:49px}#home [data-kinetic-hero] .hero-copy{padding-top:65px}#home [data-kinetic-hero] .eyebrow{letter-spacing:.8px}}
+
+#home [data-kinetic-hero] .signature{font-size:52px}
+@media(max-width:740px){#home [data-kinetic-hero] .signature{font-size:46px}}
+
+/* Reading order leads the eye from less admin to more you, then holds still. */
+#home [data-kinetic-hero] .hero-tagline{--tagline-enter:cubic-bezier(.20,.75,.34,.94);--tagline-follow:cubic-bezier(.23,1,.32,1);--tagline-settle:cubic-bezier(.00,.65,.51,.99)}
+#home .hero-tagline-first,#home .hero-tagline-follow,#home .hero-tagline-you{display:inline-block;vertical-align:baseline;max-width:100%}
+#home .hero-tagline-follow{white-space:pre}
+@media(prefers-reduced-motion:no-preference){
+ #home .hero-tagline-first{--tagline-rise:8px;animation:hero-tagline-arrive 620ms var(--tagline-enter) 80ms 1 both}
+ #home .hero-tagline-follow{--tagline-rise:6px;animation:hero-tagline-arrive 660ms var(--tagline-follow) 300ms 1 both}
+ #home .hero-tagline-you{--tagline-rise:4px;animation:hero-tagline-arrive 720ms var(--tagline-settle) 480ms 1 both}
+}
+@keyframes hero-tagline-arrive{0%{opacity:.3;transform:translateY(var(--tagline-rise))}65%{opacity:1}100%{opacity:1;transform:translateY(0)}}
+
+/* Plain contact link within the home hero. */
+#home [data-kinetic-hero] .button.primary{background:transparent;border:0;border-radius:0;box-shadow:none;color:#000;padding:12px 0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+#home [data-kinetic-hero] .button.primary:hover{background:transparent;box-shadow:none;color:#000}
+
+
+/* Headline, typed introduction, personal sign-off. Text retains its final layout. */
+#home [data-kinetic-hero] h1.hero-tagline{font-size:clamp(78px,9vw,124px);font-weight:500;line-height:.92;max-width:1120px}
+#home [data-kinetic-hero] h1.hero-tagline em{font-weight:500}
+@media(max-width:740px){#home [data-kinetic-hero] h1.hero-tagline{font-size:clamp(58px,12vw,90px)}}
+@media(prefers-reduced-motion:no-preference){
+ #home .hero-typed>span{animation:hero-type-letter 180ms cubic-bezier(.23,1,.32,1) var(--type-delay) backwards}
+ #home .hero-signoff{animation:hero-signoff-reveal 800ms cubic-bezier(.23,1,.32,1) 4750ms both}
+}
+@keyframes hero-type-letter{from{opacity:0}to{opacity:1}}
+@keyframes hero-signoff-reveal{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0)}}
+
+/* The tile artwork returns gently for the closing invitation and contact. */
+body[data-page="home"] .kinetic-page-ending{position:relative;isolation:isolate}
+body[data-page="home"] .kinetic-ending-surface{position:absolute;z-index:-1;pointer-events:none;top:0;bottom:-240px;left:calc((100% - 100vw)/2);width:100vw;overflow:hidden;background:#f5f1e9;mask-image:linear-gradient(to bottom,transparent 0%,#0003 15%,#0009 45%,#000 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#0003 15%,#0009 45%,#000 100%)}
+body[data-page="home"] .kinetic-ending-surface canvas{display:block;width:100%;height:100%}
+
+body[data-page="home"] .kinetic-page-ending .about-closing,body[data-page="home"] .kinetic-page-ending #contact{background:transparent}
+body[data-page="home"] .site-footer{position:relative;background:transparent}
+
+/* Lower contrast at the page ending keeps contact details in the foreground. */
+body[data-page="home"] .kinetic-ending-surface::after{content:"";position:absolute;inset:0;pointer-events:none;background:rgba(255,255,255,.62)}

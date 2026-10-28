@@ -1,4 +1,4 @@
-@import url('architecture-explorer.css?v=1bcd23e21865');
+@import url('architecture-explorer.css?v=e18c9f47c6d4');
 /* Technical case studies inherit the existing editorial identity. */
 .work-spatial .behind-build{--bb-line:#ded8cf;--bb-muted:#625d56;--bb-paper:#f7f4ed;margin-top:64px;padding-top:48px;border-top:1px solid var(--bb-line);color:#36383b;min-width:0}
 .behind-build .bb-heading{max-width:70ch;margin-bottom:32px}
