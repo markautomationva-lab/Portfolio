@@ -1,0 +1,193 @@
+/* Work only. Existing site typography, brand tokens and other sections are inherited. */
+:is(#work, #main).work-spatial {
+  --gallery-ivory: #ffffff;
+  background: transparent;
+  margin-block: 40px 70px;
+  padding: 35px 0 40px;
+  border: 0;
+  border-radius: 0;
+  scale: none !important;
+  translate: none !important;
+}
+.work-spatial .page-intro { padding: 0 0 22px; }
+.work-spatial .filters { margin-bottom: 0; }
+.work-spatial .spatial-gallery {
+  margin: 0;
+  position: relative;
+}
+.work-spatial .spatial-gallery-stage {
+  position: relative;
+  width: 100%;
+  height: clamp(520px, 53vw, 740px);
+  isolation: isolate;
+}
+.work-spatial .spatial-gallery-stage canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.work-spatial .spatial-gallery-note { font-size: 11px; color: #625d56; padding-bottom: 24px; }
+.work-spatial .spatial-project-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 45px;
+}
+.work-spatial .spatial-project-entry {
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 125px;
+  min-width: 0;
+}
+.work-spatial .spatial-project-entry h2 { font-size: 32px; color: #36383b; margin-bottom: 12px; }
+.work-spatial .spatial-project-entry .case-body { padding: 0; }
+.work-spatial .spatial-project-entry .case-intro { min-height: 0; margin-bottom: 18px; }
+.work-spatial .spatial-project-entry .status { color: var(--orange); }
+.work-spatial .spatial-project-entry .case-visual { margin: 0 0 18px; border-radius: 0; }
+.work-spatial .spatial-project-entry .case-visual img { aspect-ratio: 16 / 9; object-fit: contain; }
+.work-spatial.spatial-gallery-ready .spatial-project-entry .case-visual { display: none; }
+.work-spatial .spatial-project-entry details { transition: none; animation: none; }
+.work-spatial .spatial-project-entry details summary { color: #48494c; }
+@media (max-width: 740px) {
+  :is(#work, #main).work-spatial { padding-top: 26px; margin-block: 28px 42px; }
+  .work-spatial .spatial-gallery-stage { height: clamp(370px, 112vw, 520px); }
+  .work-spatial .spatial-project-index { grid-template-columns: 1fr; }
+
+}
+@media (min-width: 1600px) { .work-spatial .spatial-gallery-stage { height: 740px; } }
+
+/* Featured project information is HTML, separate from the image planes. */
+.work-spatial .spatial-project-information{display:grid;grid-template-columns:1.1fr 1.5fr auto;gap:35px;align-items:start;padding:0 0 20px}
+.work-spatial .spatial-project-information h3{font:500 clamp(34px,3.8vw,49px)/1.05 var(--display);color:#36383b;margin:0}
+.work-spatial .spatial-category{font:500 11px/1.5 var(--body);color:var(--orange);margin:0 0 10px}
+.work-spatial .spatial-description{font-size:13px;line-height:1.8;color:#48494c;margin:0;max-width:48ch}
+.work-spatial .spatial-project-cta{white-space:nowrap;color:var(--orange)}
+@media(max-width:740px){.work-spatial .spatial-project-information{grid-template-columns:1fr;gap:16px;padding:10px 0 25px}.work-spatial .spatial-project-cta{justify-self:start}.work-spatial .spatial-description{font-size:13px}}
+
+/* Phase 2: minimal, accessible controls and stable HTML information. */
+.work-spatial .spatial-gallery-stage canvas{pointer-events:auto;touch-action:pan-y pinch-zoom;cursor:grab;user-select:none;-webkit-user-select:none}
+.work-spatial .spatial-gallery-stage:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+.work-spatial .spatial-project-information{min-height:125px}
+.work-spatial .spatial-navigation{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:4px 0 22px}
+.work-spatial .spatial-navigation button{appearance:none;border:0;background:transparent;color:var(--orange);padding:12px 0;min-height:44px;font:500 12px/1.5 var(--body);cursor:pointer}
+.work-spatial .spatial-previous{justify-self:start}
+.work-spatial .spatial-next{justify-self:end}
+.work-spatial .spatial-navigation button:disabled{color:#8c857b;opacity:.5;cursor:default}
+.work-spatial .spatial-counter{font:400 12px/1.5 var(--body);color:#625d56}
+@media(max-width:740px){.work-spatial .spatial-project-information{min-height:230px;align-content:start}.work-spatial .spatial-navigation{gap:16px}}
+/* Full case-study context is readable, but secondary to the implementation. */
+.work-spatial .spatial-project-entry .case-capabilities{padding-left:18px;margin:0 0 20px;font-size:13px;line-height:1.8}
+.work-spatial .spatial-project-entry .case-context{font-size:11px;line-height:1.75;color:#625d56;margin:22px 0 0;max-width:65ch}
+/* Focus mode belongs only to Work. One selected film, accessible native controls. */
+.work-spatial .project-focus{--focus-width:min(1280px,calc(100vw - 48px));width:var(--focus-width);margin-inline:calc((100% - var(--focus-width))/2);padding:20px 0 40px;scroll-margin-top:120px}
+.work-spatial .project-focus-toolbar{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:26px}
+.work-spatial .project-focus-toolbar nav{display:flex;gap:22px}
+.work-spatial .project-focus-toolbar button{border:0;border-radius:0;background:transparent;color:var(--orange);padding:10px 0;min-height:44px;font:500 12px/1.5 var(--body);cursor:pointer}
+.work-spatial .project-focus-toolbar button:disabled{color:#8c857b;opacity:.5;cursor:default}
+.work-spatial .project-focus-layout{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:36px;align-items:start}
+.work-spatial .project-focus-media-column{position:sticky;top:115px;min-width:0}
+.work-spatial .project-focus-media{position:relative;aspect-ratio:16/9;background:#f5f0e7;isolation:isolate}
+.work-spatial .project-focus-media video,.work-spatial .project-focus-poster{display:block;width:100%;height:100%;aspect-ratio:16/9;object-fit:contain;margin:0}
+.work-spatial .project-focus-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid var(--orange);border-radius:50%;width:56px;height:56px;padding:0;display:grid;place-items:center;background:var(--orange);color:#fffaf2;cursor:pointer}
+.work-spatial .project-focus-play:disabled{opacity:.7;cursor:wait}
+.work-spatial .project-focus-film-label,.work-spatial .project-focus-status{font:400 11px/1.7 var(--body);color:#625d56;margin:12px 0 0}
+.work-spatial .project-focus-details{min-width:0;color:#48494c}
+.work-spatial .project-focus-category{font:500 11px/1.5 var(--body);color:var(--orange);margin:0 0 15px}
+.work-spatial .project-focus-details h2{font:500 clamp(34px,3.8vw,49px)/1.04 var(--display);letter-spacing:-.02em;color:#36383b;margin:0 0 20px}
+.work-spatial .project-focus-intro{font:400 14px/1.8 var(--body);color:#48494c;margin:0 0 28px}
+.work-spatial .project-focus-details h3{font:500 22px/1.15 var(--display);color:#36383b;margin:24px 0 10px}
+.work-spatial .project-focus-details p:not(.project-focus-category):not(.project-focus-intro),.work-spatial .project-focus-details ul{font:400 12px/1.85 var(--body);color:#48494c;margin:0 0 18px}
+.work-spatial .project-focus-details ul{padding-left:17px}
+.work-spatial .project-focus-details .tools{font-size:11px!important;color:#625d56!important}
+.work-spatial .project-focus-case{display:inline-block;color:var(--orange);margin-top:12px}
+.work-spatial{--work-gap:clamp(24px,3vw,40px);--work-section-gap:clamp(40px,5vw,64px)}
+.work-spatial .project-focus-layout{grid-template-columns:minmax(0,65fr) minmax(0,35fr);gap:var(--work-gap)}
+.work-spatial .project-focus-media{border-radius:16px;overflow:hidden}
+.work-spatial .project-focus-details p,.work-spatial .project-focus-details li{overflow-wrap:anywhere}
+.work-spatial .project-focus-enquiry,.work-spatial .case-similar{margin-top:var(--work-section-gap);padding-top:32px;border-top:1px solid #ded8cf}
+.work-spatial .project-focus-enquiry h2{font:500 clamp(30px,3.2vw,42px)/1.15 var(--display);max-width:26ch;margin:0 0 16px;color:#36383b}
+.work-spatial .project-focus-enquiry p{max-width:65ch;font:400 14px/1.8 var(--body);margin:0 0 22px;color:#625d56}
+.work-spatial .project-focus-enquiry a,.work-spatial .case-similar a{display:inline-flex;align-items:center;min-height:44px;color:var(--orange)}
+.work-spatial .project-focus :focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+@media(max-width:900px){.work-spatial .project-focus{--focus-width:100%;margin-inline:0}.work-spatial .project-focus-layout{grid-template-columns:1fr;gap:28px}.work-spatial .project-focus-media-column{position:static}.work-spatial .project-focus-details{max-width:65ch}.work-spatial .project-focus-toolbar{gap:12px;flex-wrap:wrap}.work-spatial .project-focus-toolbar nav{gap:18px}.work-spatial .project-focus-details h2{font-size:38px}}
+.work-spatial .project-focus{overflow-anchor:none}
+
+/* One explicitly played film, aligned to the foreground project plane. */
+.spatial-gallery-stage{position:relative;}
+.gallery-inline-video{position:absolute;left:0;top:0;width:640px;height:360px;transform-origin:0 0;z-index:2;background:#171717;}
+.gallery-inline-video video{display:block;width:100%;height:100%;object-fit:contain;}
+.gallery-video-actions{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);z-index:3;display:flex;align-items:center;justify-content:center;gap:10px;max-width:95%;white-space:nowrap;}
+.gallery-video-actions button{border:1px solid #ded8cf;background:#fffaf2;color:#383a3b;border-radius:24px;padding:11px 18px;font:inherit;font-size:12px;cursor:pointer;min-height:44px;}
+.gallery-video-actions button:first-child{background:#115578;color:white;border-color:#115578;}
+.gallery-video-actions button:focus-visible{outline:2px solid #115578;outline-offset:4px;}
+.gallery-video-actions span{font-size:11px;white-space:normal;}
+.gallery-inline-video[hidden],.gallery-video-actions[hidden],.gallery-video-actions button[hidden]{display:none;}
+@media(max-width:620px){.gallery-video-actions{bottom:0;gap:6px;}.gallery-video-actions button{padding:9px 12px;}.gallery-video-actions span{max-width:100px;}}
+.gallery-inline-video{border-radius:18px;overflow:hidden;}
+
+/* All exhibition controls share one calm baseline beneath the cards. */
+.work-spatial .gallery-video-actions{position:relative;left:auto;bottom:auto;transform:none;display:flex;flex-wrap:wrap;max-width:100%;width:100%;gap:12px;align-items:center;justify-content:center;margin:2px 0 28px;min-height:48px;}
+.work-spatial .gallery-video-actions .spatial-navigation{display:contents;}
+.work-spatial .gallery-video-actions button{background:#fffaf2;border:1px solid #ded8cf;border-radius:24px;padding:11px 18px;min-height:44px;color:#48443e;font:500 12px/1.5 var(--body);}
+.work-spatial .gallery-video-actions .spatial-previous{order:0;}
+.work-spatial .gallery-video-actions .gallery-inline-play{order:1;background:var(--orange);border-color:var(--orange);color:#fffaf2;}
+.work-spatial .gallery-video-actions .gallery-inline-maximize{order:2;}
+.work-spatial .gallery-video-actions .gallery-inline-close{order:3;}
+.work-spatial .gallery-video-actions .spatial-next{order:4;}
+.work-spatial .gallery-video-actions .spatial-counter{order:5;margin-left:8px;font-size:11px;}
+.work-spatial .gallery-video-actions [role=status]{order:6;}
+.work-spatial .gallery-video-actions button:disabled{opacity:.4;cursor:default;}
+@media(max-width:620px){.work-spatial .gallery-video-actions{gap:7px;margin-bottom:22px;}.work-spatial .gallery-video-actions button{padding:10px 12px;font-size:11px;}.work-spatial .gallery-video-actions .spatial-counter{flex-basis:100%;text-align:center;margin:0;}}
+
+/* Optional compact project directory; original case studies open only by request. */
+.work-spatial .project-view-toggle{display:flex;align-items:center;gap:14px;margin:24px 0 8px;color:#847b70}
+.work-spatial .project-view-toggle button{border:0;background:none;color:#48494c;padding:10px 0;min-height:44px;font:500 13px var(--body);cursor:pointer;border-bottom:1px solid transparent}
+.work-spatial .project-view-toggle button[aria-pressed=true]{color:var(--orange);border-bottom-color:var(--orange)}
+.work-spatial .project-directory{padding:22px 0 36px;min-height:440px}
+.work-spatial .project-directory-row{display:grid;grid-template-columns:42px minmax(0,1.4fr) minmax(0,1fr) 20px;align-items:center;gap:20px;width:100%;padding:22px 0;min-height:76px;border:0;border-top:1px solid #ded8cf;background:none;text-align:left;cursor:pointer;color:#36383b}
+.work-spatial .project-directory-row:last-child{border-bottom:1px solid #ded8cf}
+.work-spatial .project-directory-number,.work-spatial .project-directory-category{font:400 12px/1.5 var(--body)}
+.work-spatial .project-directory-number{color:var(--orange)}
+.work-spatial .project-directory-title{font:500 clamp(25px,2.6vw,34px)/1.1 var(--display)}
+.work-spatial .project-directory-row svg{width:18px;height:18px;color:var(--orange)}
+.work-spatial .project-directory-row:hover .project-directory-title{color:var(--orange)}
+.work-spatial .project-directory-row:focus-visible,.work-spatial .project-view-toggle button:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+.work-spatial.spatial-gallery-ready .spatial-project-index{display:none}
+.work-spatial.spatial-gallery-ready .spatial-project-index:has(.is-case-study){display:block}
+.work-spatial.spatial-gallery-ready .spatial-project-entry:not(.is-case-study){display:none}
+.work-spatial [hidden]{display:none!important}
+@media(max-width:740px){.work-spatial .project-directory{min-height:0}.work-spatial .project-directory-row{grid-template-columns:28px minmax(0,1fr) 18px;gap:12px;padding:18px 0}.work-spatial .project-directory-title{font-size:28px}.work-spatial .project-directory-category{grid-column:2;grid-row:2}.work-spatial .project-directory-row svg{grid-column:3;grid-row:1 / span 2}}
+/* Supporting visuals appear only inside the selected Solara case study. */
+.work-spatial .project-assets{margin-top:64px;padding-top:38px;border-top:1px solid #ded8cf}
+.work-spatial .project-assets header{max-width:68ch;margin-bottom:30px}
+.work-spatial .project-assets h2{font:500 clamp(32px,4vw,48px)/1.1 var(--display);margin:0 0 16px;color:#36383b}
+.work-spatial .project-assets header>p:not(.eyebrow){font:400 13px/1.8 var(--body);color:#48494c}
+.work-spatial .project-assets-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px 28px;margin:28px 0}
+.work-spatial .project-asset{margin:0;min-width:0}
+.work-spatial .project-asset a{display:block;background:#f5f3ee;overflow:hidden;border-radius:12px}
+.work-spatial .project-asset img{display:block;width:100%;height:auto}
+.work-spatial .project-asset-website a,.work-spatial .project-asset-form a{height:480px}
+.work-spatial .project-asset-website img{height:100%;object-fit:cover;object-position:top}
+.work-spatial .project-asset-form img{height:100%;object-fit:contain}
+.work-spatial .project-asset-wide{grid-column:1 / -1}
+.work-spatial .project-asset figcaption{font:400 12px/1.6 var(--body);color:#48494c;margin-top:12px}
+.work-spatial .project-asset a:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+@media(max-width:740px){.work-spatial .project-assets{margin-top:40px;padding-top:28px}.work-spatial .project-assets-grid{grid-template-columns:1fr;gap:28px}.work-spatial .project-asset-website a{height:380px}.work-spatial .project-asset-form a{height:auto}}
+/* Compact screenshot carousel directly below the selected project video. */
+.work-spatial .project-focus-media-column:has(.project-assets-carousel){position:static}
+.work-spatial .project-assets-carousel{margin-top:24px;padding-top:18px}
+.work-spatial .project-assets-carousel header{margin:0 0 14px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.work-spatial .project-assets-carousel header .eyebrow{margin:0}
+.work-spatial .project-assets-carousel header .text-link,.work-spatial .project-assets-carousel>.text-link{font-size:11px}
+.work-spatial .project-assets-carousel .project-assets-grid{position:relative;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#c4b9a9 transparent;margin:0;padding-bottom:12px;overscroll-behavior-x:contain}
+.work-spatial .project-assets-carousel .project-asset{flex:0 0 88%;scroll-snap-align:start;scroll-snap-stop:always}
+.work-spatial .project-assets-carousel .project-asset a{height:260px;background:#f5f3ee}
+.work-spatial .project-assets-carousel .project-asset img{height:100%;width:100%;object-fit:contain}
+.work-spatial .project-assets-carousel .project-asset-website img{object-fit:cover;object-position:top}
+.work-spatial .project-assets-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 16px;font:400 11px var(--body)}
+.work-spatial .project-assets-controls button{background:none;border:1px solid #ded8cf;border-radius:22px;padding:10px 14px;min-height:44px;color:#48494c;font:500 11px var(--body);cursor:pointer}
+.work-spatial .project-assets-controls button:disabled{opacity:.4;cursor:default}
+.work-spatial .project-assets-controls button:focus-visible,.work-spatial .project-assets-carousel .project-assets-grid:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+@media(max-width:740px){.work-spatial .project-assets-carousel .project-asset a{height:220px}.work-spatial .project-assets-carousel .project-asset{flex-basis:92%}}

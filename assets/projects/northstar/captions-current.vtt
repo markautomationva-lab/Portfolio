@@ -1,0 +1,124 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:01.960
+Every truck journey creates information.
+
+2
+00:00:02.900 --> 00:00:04.760
+Keeping it connected is the challenge.
+
+3
+00:00:05.560 --> 00:00:10.460
+Northstar brings drivers, dispatch and
+accounting into one shared workflow.
+
+4
+00:00:11.080 --> 00:00:15.700
+The rota gives each driver a truck, a
+destination and a working schedule.
+
+5
+00:00:16.460 --> 00:00:20.720
+In the driver workspace, they can review
+the assignment, start their shift and
+
+6
+00:00:20.720 --> 00:00:21.620
+begin the journey.
+
+7
+00:00:22.200 --> 00:00:26.800
+Dispatch follows the fleet on a UK map
+with journey progress, driver details
+
+8
+00:00:26.800 --> 00:00:28.920
+and estimated arrival times.
+
+9
+00:00:29.460 --> 00:00:33.800
+Reported stops and recorded notes help the
+dispatcher understand what needs
+
+10
+00:00:33.800 --> 00:00:34.000
+attention.
+
+11
+00:00:34.960 --> 00:00:36.380
+When a truck reaches its destination,
+
+12
+00:00:37.260 --> 00:00:40.020
+Northstar records the arrival and saves
+the journey report.
+
+13
+00:00:40.760 --> 00:00:42.820
+Then n8n picks up the event.
+
+14
+00:00:43.520 --> 00:00:46.980
+It retrieves the journey details, sends
+the owner an arrival notification
+
+15
+00:00:47.680 --> 00:00:51.200
+and prepares an AI accounting summary from
+the recorded figures.
+
+16
+00:00:51.900 --> 00:00:56.360
+Fuel, driver and vehicle costs are
+presented as estimates with assumptions
+
+17
+00:00:56.360 --> 00:00:58.820
+and missing information clearly
+identified.
+
+18
+00:00:59.780 --> 00:01:01.420
+The summary returns to Northstar.
+
+19
+00:01:01.920 --> 00:01:05.800
+An accounting email is sent and Google
+Sheets becomes a searchable journey
+
+20
+00:01:05.800 --> 00:01:06.360
+register.
+
+21
+00:01:06.920 --> 00:01:11.460
+Saved summaries, email receipts and event
+progress help avoid repeating
+
+22
+00:01:11.460 --> 00:01:12.300
+completed work.
+
+23
+00:01:12.860 --> 00:01:14.820
+Built as a working portfolio MVP,
+
+24
+00:01:15.680 --> 00:01:19.620
+Northstar uses simulated fleet movement
+and fictional cost assumptions.
+
+25
+00:01:20.580 --> 00:01:25.120
+One connected journey, from the driver's
+first action to the accounting team's
+
+26
+00:01:25.120 --> 00:01:25.860
+final report.
+
+27
+00:01:26.620 --> 00:01:30.560
+Mark Automates, a little less admin, a lot
+more you.

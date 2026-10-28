@@ -1,0 +1,1 @@
+const target=new URL('./index.html',location.href);target.search=location.search;const hash=location.hash;target.hash=/^#(?:northstar|hayes|grace|hvc|solara|roofline)$/.test(hash)?'#project-'+hash.slice(1):hash||document.body.dataset.defaultSection;location.replace(target.href);

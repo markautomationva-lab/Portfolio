@@ -1,0 +1,199 @@
+/* Services only: inherit the site's typefaces, palette and content width. */
+#services .service-explorer-heading{padding:42px 0 35px}
+#services .service-explorer-heading h2{color:#36383b;font:500 clamp(40px,4.5vw,57px)/1.05 var(--display);letter-spacing:-.02em;margin:0 0 18px}
+#services .service-explorer-heading p{font:400 14px/1.8 var(--body);color:#55514c;margin:0}
+#services .service-explorer{padding-bottom:38px}
+#services .service-explorer-item{min-width:0}
+#services .service-row-heading{margin:0;min-width:0}
+#services .service-row{width:100%;display:grid;grid-template-columns:28px 1fr 24px;align-items:center;gap:16px;min-height:98px;padding:22px 0;border:0;border-bottom:1px solid #c7b69b70;border-radius:0;background:transparent;box-shadow:none;text-align:left;color:#5c5953;cursor:pointer}
+#services .service-number{font:400 11px/1.5 var(--body);font-variant-numeric:tabular-nums;align-self:center;color:#777067}
+#services .service-row-title{font:500 clamp(27px,2.65vw,36px)/1.12 var(--display);letter-spacing:-.02em;transition:translate 280ms var(--ui),color 280ms var(--ui)}
+#services .service-row-arrow{display:flex;align-items:center;justify-content:center;position:relative;color:#777067;transition:color 280ms var(--ui),rotate 280ms var(--ui)}
+#services .service-row[aria-expanded=true]{color:#302d2a}
+#services .service-row[aria-expanded=true] .service-number,#services .service-row[aria-expanded=true] .service-row-arrow{color:var(--orange)}
+#services .service-row[aria-expanded=true] .service-number::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--orange);margin-bottom:5px}
+#services .service-row:focus-visible,#services .service-discuss:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
+#services .service-preview-panel{padding:14px 0 24px;min-width:0;color:#36383b}
+#services .service-preview-category{font:500 11px/1.5 var(--body);color:var(--orange);margin:0 0 20px}
+#services .service-preview-panel>h3{font:500 clamp(36px,3.9vw,49px)/1.02 var(--display);letter-spacing:-.02em;color:#36383b;margin:0 0 22px;text-wrap:balance}
+#services .service-preview-description{font:400 14px/1.85 var(--body);color:#55514c;margin:0 0 22px;max-width:48ch}
+#services .service-preview-panel h4{font:500 11px/1.6 var(--body);color:#62594e;margin:0 0 12px}
+#services .service-preview-panel ul{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;row-gap:8px;list-style:none;padding:0;margin:0 0 25px;color:#48443e;font:400 12px/1.65 var(--body)}
+#services .service-preview-panel li{padding-left:12px;position:relative}
+#services .service-preview-panel li::before{content:'';position:absolute;left:0;top:.7em;width:3px;height:3px;background:#115578;border-radius:50%}
+#services .service-discuss{display:inline-block;color:var(--orange);font:500 12px/1.7 var(--body);margin-top:22px}
+#services .service-visual{position:relative;margin:0;height:158px;overflow:hidden;background:#f5f0e7;color:#5f5546}
+#services .service-visual-image img{height:100%;width:100%;object-fit:cover}
+#services .service-visual-caption{position:absolute;right:10px;bottom:7px;font:400 9px/1.5 var(--body);color:#62594e;background:#faf7eee8;padding:2px 5px}
+#services .service-visual-pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:25px 22px 29px}
+#services .service-visual-pipeline>div{border-top:1px solid #c7b69b;padding-top:9px}
+#services .service-visual-pipeline span{font:400 9px/1.5 var(--body)}
+#services .service-visual-pipeline i{height:15px;width:85%;display:block;margin-top:10px;background:#d8d1c3}
+#services .service-visual-pipeline>div:nth-child(2) i{background:#115578}
+#services .service-visual-pipeline>div:nth-child(3) i{background:#706f64}
+#services .service-wave{display:flex;align-items:center;justify-content:center;gap:7px;height:112px}
+#services .service-wave i{display:block;width:3px;height:var(--wave-height);background:#115578;border-radius:3px;opacity:.75}
+#services .service-visual-note{display:block;text-align:center;font:400 10px/1.5 var(--body)}
+#services .service-visual-browser{padding:17px 24px}
+#services .service-browser-bar{display:flex;align-items:center;gap:5px;border-bottom:1px solid #c7b69b;padding-bottom:10px}
+#services .service-browser-bar i{width:4px;height:4px;background:#b7a58d;border-radius:50%}
+#services .service-browser-bar span{font:400 10px var(--body);margin-left:14px}
+#services .service-browser-content{display:flex;gap:25px;padding-top:28px;font:500 18px var(--display)}
+#services .service-visual-knowledge{padding:30px 25px}
+#services .service-search{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #b7a58d;padding-bottom:14px;font:400 12px var(--body);gap:15px}
+#services .service-sources{display:flex;justify-content:space-between;margin-top:20px;font:400 10px var(--body)}
+#services .service-explorer.is-enhanced{display:grid;grid-template-columns:minmax(0,55fr) minmax(0,45fr);column-gap:clamp(35px,5vw,70px);align-items:stretch}
+#services .is-enhanced .service-explorer-item{display:contents}
+#services .is-enhanced .service-row-heading{grid-column:1}
+#services .is-enhanced .service-preview-panel{grid-column:2;grid-row:1/span 7;align-self:start}
+
+
+@media(hover:hover){#services .service-row:hover .service-row-title{translate:3px 0;color:#302d2a}#services .service-row:hover .service-row-arrow{color:var(--orange)}}
+@media(max-width:900px){
+ #services .service-explorer-heading{padding:32px 0 25px}
+ #services .service-explorer.is-enhanced{display:block}
+ #services .is-enhanced .service-explorer-item{display:block}
+ #services .service-row{min-height:82px;gap:12px;padding:21px 0;grid-template-columns:25px 1fr 22px}
+ #services .service-row-title{font-size:clamp(26px,4.4vw,34px)}
+ #services .service-row[aria-expanded=true] .service-row-arrow{rotate:90deg}
+ #services .service-preview-panel{padding:26px 0 30px 37px}
+ #services .service-preview-panel>h3{font-size:34px;max-width:15ch}
+ #services .service-preview-description{max-width:52ch}
+ #services .service-visual{max-width:480px;height:150px}
+ #services .service-preview-panel ul{max-width:480px}
+}
+@media(max-width:420px){#services .service-preview-panel{padding-left:0}#services .service-preview-panel ul{column-gap:12px;font-size:11px}#services .service-row-title{font-size:27px}#services .service-preview-panel>h3{font-size:32px}}
+@media(prefers-reduced-motion:reduce){#services .service-row-title,#services .service-row-arrow{transition:none}#services .is-enhanced .service-preview-panel:not([hidden]){animation:none}}
+/* A shared, lightweight visual language for the six services; no portfolio assets. */
+#services .service-viz svg{display:block;width:100%;height:100%;overflow:hidden}
+#services .service-viz .viz-line{fill:none;stroke:#c7b69b;stroke-width:1}
+#services .service-viz .viz-node rect{fill:#fffaf2;stroke:#c7b69b;stroke-width:1}
+#services .service-viz .viz-icon{fill:none;stroke:#115578;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+#services .service-viz .viz-text{font:10px var(--body);fill:#51483d;text-anchor:middle}
+#services .service-viz .viz-align-left{text-anchor:start}
+#services .service-viz .viz-column-label{font-size:11px}
+#services .service-viz .viz-muted{fill:#ded5c5}
+/* Finite service stories: the completed system holds until another selection. */
+#services .service-viz .viz-work-node rect{fill:#eadcc5;stroke:#b49a73;stroke-width:1}
+#services .service-viz .viz-work-node text{font-size:8.5px}
+#services .service-viz .viz-signal,#services .service-viz .viz-retrieval-signal,#services .service-viz .viz-answer-signal{fill:none;stroke:#115578;stroke-width:2;stroke-linecap:round;stroke-dasharray:5 100;opacity:0}
+#services .service-viz.is-started .viz-work-node rect{animation:service-node-arrival .65s var(--ui) both;animation-delay:var(--node-delay)}
+#services .service-viz.is-started .viz-signal{animation:service-signal-arrival 1.2s var(--ui) both;animation-delay:var(--signal-delay)}
+#services .service-viz.is-started .viz-complete{animation:service-state-arrival .4s 4.6s var(--ui) both}
+#services .service-viz .viz-voice rect{fill:#115578;transform-box:fill-box;transform-origin:center;transform:scaleY(.3)}
+#services .service-viz.is-started .viz-voice rect{animation:service-voice-listen 1.65s var(--ui) 2 both;animation-delay:calc(.4s + var(--voice-delay))}
+#services .service-viz.is-started .viz-call{animation:service-state-arrival .45s var(--ui) both}
+#services .service-viz.is-started .viz-response{animation:service-state-arrival .45s 2.6s var(--ui) both}
+#services .service-viz .viz-confirm{fill:none;stroke:#115578;stroke-width:1.3}
+#services .service-viz .viz-confirm text{fill:#6a4a25;stroke:none;font:10px var(--body)}
+#services .service-viz.is-started .viz-confirm{animation:service-state-arrival .5s 4.3s var(--ui) both}
+#services .service-viz .viz-lead{transform:translateX(272px)}
+#services .service-viz .viz-lead rect{fill:#115578}
+#services .service-viz .viz-lead circle{fill:#f0ebdd}
+#services .service-viz .viz-lead text{font:10px var(--body);fill:#fffaf2}
+#services .service-viz.is-started .viz-lead{animation:service-pipeline-story 6s var(--ui) both}
+#services .service-viz .viz-status-new,#services .service-viz .viz-status-qualified{opacity:0}
+#services .service-viz.is-started .viz-status-new{animation:service-status-new 6s both}
+#services .service-viz.is-started .viz-status-qualified{animation:service-status-qualified 6s both}
+#services .service-viz.is-started .viz-status-ready{animation:service-status-ready 6s both}
+#services .service-viz .viz-intelligence{fill:#e7d9c2;stroke:#a58b65;stroke-width:1}
+#services .service-viz .viz-intelligence path:last-child{fill:none;stroke:#115578}
+#services .service-viz .viz-relevant{fill:none;stroke:#115578;stroke-opacity:.6;stroke-width:4}
+#services .service-viz.is-started .viz-doc-a{animation:service-component-assemble .6s var(--ui) both}
+#services .service-viz.is-started .viz-doc-b{animation:service-component-assemble .6s .2s var(--ui) both}
+#services .service-viz.is-started .viz-relevant{animation:service-state-arrival .4s 1.2s var(--ui) both}
+#services .service-viz.is-started .viz-retrieval-signal{animation:service-signal-arrival 1.25s 1.6s var(--ui) both}
+#services .service-viz.is-started .viz-answer-signal{animation:service-signal-arrival .8s 2.85s var(--ui) both}
+#services .service-viz.is-started .viz-answer-lines path{animation:service-answer-line .45s 3.65s var(--ui) both}
+#services .service-viz.is-started .viz-answer-lines path:nth-child(2){animation-delay:3.85s}
+#services .service-viz.is-started .viz-answer-lines path:nth-child(3){animation-delay:4.05s}
+#services .service-viz.is-started .viz-answer-label{animation:service-state-arrival .4s 4.25s var(--ui) both}
+#services .service-viz .viz-ground{fill:#c7b69b;opacity:.22}
+#services .service-viz .viz-sculpture{transform-box:fill-box;transform-origin:center;transform:perspective(500px) rotateY(15deg) rotateZ(4deg)}
+#services .service-viz .viz-facet-top{fill:#e6d7bf;stroke:#c7b69b;stroke-width:.8}
+#services .service-viz .viz-facet-left{fill:#49443e;stroke:#49443e;stroke-width:.8}
+#services .service-viz .viz-facet-right{fill:#115578;stroke:#115578;stroke-width:.8}
+#services .service-viz .viz-sculpture-edge{fill:none;stroke:#faf7ee;stroke-opacity:.45;stroke-width:.8}
+#services .service-viz.is-started .viz-facet-top{animation:service-piece-top .9s var(--ui) both}
+#services .service-viz.is-started .viz-facet-left{animation:service-piece-left .9s .15s var(--ui) both}
+#services .service-viz.is-started .viz-facet-right{animation:service-piece-right .9s .3s var(--ui) both}
+#services .service-viz.is-started .viz-sculpture-edge{animation:service-state-arrival .4s 1s var(--ui) both}
+#services .service-viz.is-started .viz-sculpture{animation:service-sculpture-finish 6.5s var(--ui) both}
+#services .service-viz .viz-window{fill:#fffaf2;stroke:#bbaa91;stroke-width:1}
+#services .service-viz .viz-window-back{fill:#e9e0d0}
+#services .service-viz .viz-interface{fill:#e4d6c1}
+#services .service-viz .viz-interface rect:last-child{fill:#d5b387}
+#services .service-viz .viz-dashboard-bars{fill:#115578}
+#services .service-viz .viz-dashboard-bars rect{transform-box:fill-box;transform-origin:center bottom}
+#services .service-viz .viz-dashboard-ready{fill:#115578}
+#services .service-viz .viz-dashboard-ready text{font:9px var(--body)}
+#services .service-viz.is-started .viz-window-back{animation:service-component-assemble .7s var(--ui) both}
+#services .service-viz.is-started .viz-window-front{animation:service-component-assemble .7s .45s var(--ui) both}
+#services .service-viz.is-started .viz-browser-nav{animation:service-answer-line .55s 1.1s var(--ui) both}
+#services .service-viz.is-started .viz-interface{animation:service-component-assemble .7s 1.6s var(--ui) both}
+#services .service-viz.is-started .viz-dashboard-bars rect{animation:service-dashboard-grow .8s 2.35s var(--ui) both}
+#services .service-viz.is-started .viz-dashboard-bars rect:nth-child(2){animation-delay:2.5s}
+#services .service-viz.is-started .viz-dashboard-bars rect:nth-child(3){animation-delay:2.65s}
+#services .service-viz.is-started .viz-dashboard-ready{animation:service-state-arrival .4s 3.5s var(--ui) both}
+#services .service-viz.is-started svg *{animation-play-state:paused}
+#services .service-viz.is-started.is-running svg *{animation-play-state:running}
+@keyframes service-state-arrival{from{opacity:0}to{opacity:1}}
+@keyframes service-node-arrival{0%{fill:#fffaf2;stroke:#c7b69b}55%{fill:#f3dfc2;stroke:#115578}100%{fill:#eadcc5;stroke:#b49a73}}
+@keyframes service-signal-arrival{0%{stroke-dashoffset:105;opacity:0}12%{opacity:1}85%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes service-voice-listen{0%,100%{transform:scaleY(.3)}26%{transform:scaleY(.9)}52%{transform:scaleY(.45)}76%{transform:scaleY(1)}}
+@keyframes service-pipeline-story{0%{transform:translateX(0);opacity:0}8%,14%{transform:translateX(0);opacity:1}38%,48%{transform:translateX(136px);opacity:1}72%,100%{transform:translateX(272px);opacity:1}}
+@keyframes service-status-new{0%,30%{opacity:1}35%,100%{opacity:0}}
+@keyframes service-status-qualified{0%,34%{opacity:0}38%,65%{opacity:1}69%,100%{opacity:0}}
+@keyframes service-status-ready{0%,68%{opacity:0}72%,100%{opacity:1}}
+@keyframes service-component-assemble{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes service-answer-line{from{clip-path:inset(0 100% 0 0);opacity:0}to{clip-path:inset(0);opacity:1}}
+@keyframes service-piece-top{from{transform:translateY(-22px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes service-piece-left{from{transform:translate(-24px,12px);opacity:0}to{transform:translate(0);opacity:1}}
+@keyframes service-piece-right{from{transform:translate(24px,12px);opacity:0}to{transform:translate(0);opacity:1}}
+@keyframes service-sculpture-finish{0%,22%{transform:perspective(500px) rotateY(0) rotateZ(0)}50%{transform:perspective(500px) rotateY(-20deg) rotateZ(-5deg)}80%,100%{transform:perspective(500px) rotateY(15deg) rotateZ(4deg)}}
+@keyframes service-dashboard-grow{from{transform:scaleY(.05)}to{transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){#services .service-viz svg *{animation:none!important}}
+/* The engineering service uses the same restrained, finite process language. */
+#services .service-viz .viz-os-frame{fill:#fffaf2;stroke:#c7b69b;stroke-width:1}
+#services .service-viz .viz-os-heading{font:9px var(--body);fill:#62594e}
+#services .service-viz .viz-os-status{font:8px var(--body);fill:#115578;text-anchor:end}
+#services .service-viz .viz-os-node rect{fill:#eadcc5;stroke:#b49a73;stroke-width:.8}
+#services .service-viz .viz-os-node text{font-size:8px}
+#services .service-viz .viz-os-signal{fill:none;stroke:#115578;stroke-width:2;stroke-linecap:round;stroke-dasharray:5 100;opacity:0}
+#services .service-viz .viz-os-approval{fill:none;stroke:#115578;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+#services .service-viz.is-started .viz-os-node rect{animation:service-node-arrival .6s var(--ui) both;animation-delay:var(--node-delay)}
+#services .service-viz.is-started .viz-os-signal{animation:service-signal-arrival var(--os-duration) var(--os-delay) var(--ui) both}
+#services .service-viz.is-started .viz-os-approval{animation:service-state-arrival .4s 3.5s var(--ui) both}
+#services .service-viz.is-started .viz-os-status{animation:service-state-arrival .4s 5s var(--ui) both}
+#services .service-viz.is-started:not(.is-running) .viz-os-node rect,#services .service-viz.is-started:not(.is-running) .viz-os-signal,#services .service-viz.is-started:not(.is-running) .viz-os-approval,#services .service-viz.is-started:not(.is-running) .viz-os-status{animation-play-state:paused}
+#services .service-viz.is-started .viz-os-node:first-child{animation:service-task-intake .6s var(--ui) both}
+#services .service-viz.is-started:not(.is-running) .viz-os-node:first-child{animation-play-state:paused}
+@keyframes service-task-intake{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+/* Desktop overview uses both columns; selection focuses the same seven rows. */
+@media(min-width:901px){
+ #services .service-explorer.is-enhanced{align-content:start;}
+ #services .service-explorer.is-enhanced:not(.has-selection){grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(32px,5vw,65px);padding-bottom:24px;}
+ #services .is-enhanced:not(.has-selection) .service-row-heading{grid-column:auto;grid-row:auto;}
+ #services .is-enhanced:not(.has-selection) .service-row{min-height:84px;padding:16px 0;gap:13px;}
+ #services .is-enhanced:not(.has-selection) .service-row-title{font-size:clamp(26px,2.4vw,33px);}
+ #services .service-explorer.is-enhanced.has-selection{grid-template-columns:minmax(0,46fr) minmax(0,54fr);column-gap:clamp(38px,5vw,65px);}
+ #services .is-enhanced.has-selection .service-row{min-height:76px;padding:15px 0;gap:12px;}
+ #services .is-enhanced.has-selection .service-row-title{font-size:clamp(25px,2.25vw,31px);}
+ #services .is-enhanced.has-selection .service-row-heading{align-self:start;}
+ #services .service-explorer[data-layout-state=moving]{overflow:clip;}
+ #services .service-explorer[data-layout-state=moving] .service-preview-panel{visibility:hidden;}
+}
+@media(prefers-reduced-motion:reduce){#services .service-explorer{scroll-behavior:auto;}}
+/* Scale the approved diagrams to the reading column, without changing their stories. */
+#services .service-visual{height:clamp(220px,20vw,280px);border-radius:16px}
+#services .service-preview-panel{padding-top:0}
+#services .service-preview-description{max-width:58ch}
+#services .service-row[aria-expanded=true] .service-row-title{color:var(--orange)}
+@media(min-width:901px){#services .is-enhanced.has-selection .service-preview-panel{padding-top:14px}#services .is-enhanced.has-selection .service-row{min-height:78px}}
+@media(max-width:900px){#services .service-preview-panel{padding-top:24px}#services .service-visual{max-width:100%;height:clamp(210px,33vw,270px)}}
+@media(max-width:420px){#services .service-visual{height:205px}#services .service-preview-panel ul{grid-template-columns:1fr;font-size:12px}}
+
+/* Service names lead the list without decorative numbering. */
+#services .service-number{display:none}
+#services .service-row{grid-template-columns:minmax(0,1fr) 24px}
+@media(max-width:900px){#services .service-preview-panel{padding-left:0}}

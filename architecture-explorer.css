@@ -1,0 +1,48 @@
+/* Architecture only: a relationship-led system explorer. */
+.architecture-explorer{--ax-line:#c3b7a4;--ax-ink:#36383b;--ax-muted:#625d56;--ax-accent:#115578;color:var(--ax-ink);min-width:0}
+.architecture-explorer .ax-intro{margin:0 0 24px;max-width:78ch}
+.architecture-explorer .ax-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:14px;font:400 11px/1.6 var(--body);color:var(--ax-muted)}
+.architecture-explorer .ax-reset{border:0;background:none;padding:8px 0;color:var(--ax-accent);white-space:nowrap}
+.architecture-explorer .ax-scroll{width:100%;overflow:auto;scrollbar-width:thin;scrollbar-color:#b4a795 #f7f4ed;background:#f8f6f0;border:1px solid #e7e1d7;border-radius:28px;overscroll-behavior-x:contain}
+.architecture-explorer .ax-canvas{position:relative;isolation:isolate;min-height:0}
+.architecture-explorer .ax-component{position:absolute;min-width:0;z-index:1}
+.architecture-explorer .ax-node{box-sizing:border-box;position:relative;width:100%;height:auto;min-height:164px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:17px 15px;text-align:left;background:#fff;border:1px solid #d7cdbd;border-radius:20px;box-shadow:0 5px 14px rgb(55 45 32 / .045);transition:background 180ms cubic-bezier(.23,1,.32,1),border-color 180ms cubic-bezier(.23,1,.32,1),opacity 180ms cubic-bezier(.23,1,.32,1)}
+.architecture-explorer .ax-node-top{display:flex;align-items:center;gap:8px;color:var(--ax-muted);font-size:11px;line-height:1.35;letter-spacing:.035em}
+.architecture-explorer .ax-node-top svg{width:21px;height:21px;flex:none;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.architecture-explorer .ax-node strong{font:500 15px/1.25 var(--body);max-width:100%;overflow-wrap:anywhere;padding-right:5px}
+.architecture-explorer .ax-node-role{font:400 12px/1.45 var(--body);color:var(--ax-muted)}
+.architecture-explorer .ax-node-tech{font:400 12px/1.4 var(--body);color:var(--ax-muted);margin-top:auto}
+.architecture-explorer .ax-node-indicator{position:absolute;right:11px;top:11px;width:5px;height:5px;border:1px solid #c3b7a4;border-radius:50%}
+.architecture-explorer .ax-node:hover,.architecture-explorer .ax-node.is-emphasised{border-color:var(--ax-accent);background:#fffaf3}
+.architecture-explorer .ax-node[aria-pressed=true] .ax-node-indicator{background:var(--ax-accent);border-color:var(--ax-accent)}
+.architecture-explorer .ax-node.is-unrelated{opacity:.86}
+.architecture-explorer .ax-connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:0}
+.architecture-explorer .ax-path{fill:none;stroke:#ad9f8b;stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round;transition:stroke 180ms cubic-bezier(.23,1,.32,1),opacity 180ms cubic-bezier(.23,1,.32,1)}
+.architecture-explorer .ax-path.is-active{stroke:var(--ax-accent);stroke-width:1.7}
+.architecture-explorer .ax-path.is-muted{opacity:.3}
+.architecture-explorer .ax-signal{fill:var(--ax-accent);filter:drop-shadow(0 0 3px rgb(17 85 120 / .5))}
+.architecture-explorer .ax-connections.is-flowing .ax-path{stroke:#115578;filter:drop-shadow(0 0 2px rgb(17 85 120 / .18))}
+.architecture-explorer .ax-panel-home{min-height:34px}
+.architecture-explorer .ax-detail{position:relative;margin-top:22px;padding:24px 0;border-top:1px solid #ded8cf;max-width:100%;color:var(--ax-ink)}
+.architecture-explorer .ax-detail-eyebrow{font:500 10px/1.5 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--ax-accent);margin:0 130px 10px 0}
+.architecture-explorer .ax-detail h3{font:500 30px/1.1 var(--display);margin:0 0 10px}
+.architecture-explorer .ax-detail .ax-role{font-size:11px;color:var(--ax-muted);margin:0 0 12px}
+.architecture-explorer .ax-detail>p:not(.ax-detail-eyebrow):not(.ax-role){font-size:14px;margin:0 0 20px;max-width:80ch}
+.architecture-explorer .ax-close{position:absolute;right:0;top:16px;border:0;background:none;color:var(--ax-accent);padding:8px 0}
+.architecture-explorer .ax-detail dl{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 20px;font:400 12px/1.65 var(--body);margin:0;max-width:95ch}
+.architecture-explorer .ax-detail dt{font-weight:500;color:var(--ax-muted)}
+.architecture-explorer .ax-detail dd{margin:0;overflow-wrap:anywhere}
+.architecture-explorer .ax-transfers{margin-top:22px;border-top:1px solid #ded8cf;padding-top:18px}
+.architecture-explorer .ax-transfer-heading{font:500 10px/1.5 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--ax-muted);margin:0 0 16px}
+.architecture-explorer .ax-transfers ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px}
+.architecture-explorer .ax-transfers li{display:flex;gap:10px;font:400 12px/1.5 var(--body);color:var(--ax-muted);min-width:0}
+.architecture-explorer .ax-transfer-number{font-size:9px;color:var(--ax-accent);padding-top:2px}
+.architecture-explorer .ax-transfers strong{display:block;font-weight:500;color:var(--ax-ink);margin-bottom:4px}
+.architecture-explorer .ax-transfers small{display:block;font-size:11px;overflow-wrap:anywhere}
+.architecture-explorer .ax-transfers .is-active strong{color:var(--ax-accent)}
+@media(max-width:900px){.architecture-explorer .ax-transfers ol{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.architecture-explorer .ax-canvas{display:flex;flex-direction:column;gap:32px;padding:32px 40px;box-sizing:border-box}.architecture-explorer .ax-component{position:relative;width:100%;min-width:0}.architecture-explorer .ax-node{height:auto;min-height:148px;padding:18px}.architecture-explorer .ax-node strong{font-size:16px}.architecture-explorer .ax-node-role{font-size:12px}.architecture-explorer .ax-node-top{font-size:11px}.architecture-explorer .ax-node-tech{font-size:12px}.architecture-explorer .ax-toolbar{align-items:flex-start}.architecture-explorer .ax-toolbar span{max-width:24ch}.architecture-explorer .ax-detail{padding:24px 0 0;margin:18px 0 0}.architecture-explorer .ax-detail h3{font-size:26px}.architecture-explorer .ax-close{position:static;display:block;margin-left:auto;padding:0 0 10px;min-height:32px}.architecture-explorer .ax-detail-eyebrow{margin-right:0}.architecture-explorer .ax-detail dl{grid-template-columns:1fr;gap:3px}.architecture-explorer .ax-detail dd{margin-bottom:12px}.architecture-explorer .ax-transfers ol{grid-template-columns:1fr;gap:18px}.architecture-explorer .ax-panel-home{min-height:0}}
+@media(prefers-reduced-motion:reduce){.architecture-explorer *{transition:none!important;scroll-behavior:auto!important}}
+
+.architecture-explorer .ax-view-controls{display:flex;align-items:center;gap:18px}.architecture-explorer .ax-pan-left,.architecture-explorer .ax-pan-right{display:none;border:0;background:none;color:var(--ax-accent);padding:8px;min-width:36px}.architecture-explorer.ax-can-pan .ax-pan-left,.architecture-explorer.ax-can-pan .ax-pan-right{display:block}
+
